@@ -26,6 +26,25 @@
 		07A548FA1E7C622200A6C4A1 /* NSManagedObjectContext+KBAImportExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A548F81E7C622200A6C4A1 /* NSManagedObjectContext+KBAImportExtensions.m */; };
 		07A548FC1E7C647F00A6C4A1 /* Stanley.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07A548FB1E7C647F00A6C4A1 /* Stanley.framework */; };
 		07A548FF1E7C658C00A6C4A1 /* Test.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 07A548FE1E7C658C00A6C4A1 /* Test.xcdatamodel */; };
+		07A5490F1E7C684B00A6C4A1 /* Baxter.h in Headers */ = {isa = PBXBuildFile; fileRef = 07A548C41E7C599600A6C4A1 /* Baxter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		07A549101E7C684B00A6C4A1 /* NSFetchRequest+KBAExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 07A548CD1E7C5AD000A6C4A1 /* NSFetchRequest+KBAExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		07A549111E7C684B00A6C4A1 /* NSFetchRequest+KBAExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A548CE1E7C5AD000A6C4A1 /* NSFetchRequest+KBAExtensions.m */; };
+		07A549121E7C684B00A6C4A1 /* NSManagedObjectContext+KBAExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 07A548E31E7C5CCF00A6C4A1 /* NSManagedObjectContext+KBAExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		07A549131E7C684B00A6C4A1 /* NSManagedObjectContext+KBAExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A548E41E7C5CCF00A6C4A1 /* NSManagedObjectContext+KBAExtensions.m */; };
+		07A549141E7C684B00A6C4A1 /* KBAManagedObjectEntityMapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 07A548EB1E7C5FE700A6C4A1 /* KBAManagedObjectEntityMapping.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		07A549151E7C684B00A6C4A1 /* KBAManagedObjectPropertyMapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 07A548ED1E7C604C00A6C4A1 /* KBAManagedObjectPropertyMapping.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		07A549161E7C684B00A6C4A1 /* NSManagedObjectContext+KBAImportExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 07A548F71E7C622200A6C4A1 /* NSManagedObjectContext+KBAImportExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		07A549171E7C684B00A6C4A1 /* NSManagedObjectContext+KBAImportExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A548F81E7C622200A6C4A1 /* NSManagedObjectContext+KBAImportExtensions.m */; };
+		07A549181E7C684B00A6C4A1 /* KBADefaultManagedObjectEntityMapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 07A548EF1E7C60BC00A6C4A1 /* KBADefaultManagedObjectEntityMapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		07A549191E7C684B00A6C4A1 /* KBADefaultManagedObjectEntityMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A548F01E7C60BC00A6C4A1 /* KBADefaultManagedObjectEntityMapping.m */; };
+		07A5491A1E7C684B00A6C4A1 /* KBADefaultManagedObjectPropertyMapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 07A548F31E7C613800A6C4A1 /* KBADefaultManagedObjectPropertyMapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		07A5491B1E7C684B00A6C4A1 /* KBADefaultManagedObjectPropertyMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A548F41E7C613800A6C4A1 /* KBADefaultManagedObjectPropertyMapping.m */; };
+		07A549251E7C689000A6C4A1 /* Baxter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07A549051E7C677300A6C4A1 /* Baxter.framework */; };
+		07A5492C1E7C68A500A6C4A1 /* Stanley.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07A5492B1E7C68A500A6C4A1 /* Stanley.framework */; };
+		07A5492E1E7C68AA00A6C4A1 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07A5492D1E7C68AA00A6C4A1 /* CoreData.framework */; };
+		07A549301E7C690E00A6C4A1 /* Stanley.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07A5492F1E7C690E00A6C4A1 /* Stanley.framework */; };
+		07A549321E7C696900A6C4A1 /* Test.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 07A548FE1E7C658C00A6C4A1 /* Test.xcdatamodel */; };
+		07A549331E7C696D00A6C4A1 /* KBANSManagedObjectContextImportExtensionsTextCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A548D71E7C5B7A00A6C4A1 /* KBANSManagedObjectContextImportExtensionsTextCase.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +54,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 07A548C01E7C599600A6C4A1;
 			remoteInfo = "Baxter-iOS";
+		};
+		07A549261E7C689000A6C4A1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 07A548B61E7C577F00A6C4A1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 07A549041E7C677300A6C4A1;
+			remoteInfo = "Baxter-macOS";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -62,6 +88,13 @@
 		07A548F81E7C622200A6C4A1 /* NSManagedObjectContext+KBAImportExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObjectContext+KBAImportExtensions.m"; sourceTree = "<group>"; };
 		07A548FB1E7C647F00A6C4A1 /* Stanley.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Stanley.framework; path = "Vendor/Stanley/build/Debug-iphoneos/Stanley.framework"; sourceTree = "<group>"; };
 		07A548FE1E7C658C00A6C4A1 /* Test.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Test.xcdatamodel; sourceTree = "<group>"; };
+		07A549051E7C677300A6C4A1 /* Baxter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Baxter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		07A5490E1E7C680000A6C4A1 /* Baxter-macOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Baxter-macOS-Info.plist"; sourceTree = "<group>"; };
+		07A549201E7C689000A6C4A1 /* BaxterTests-macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BaxterTests-macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		07A5492B1E7C68A500A6C4A1 /* Stanley.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Stanley.framework; path = Vendor/Stanley/build/Debug/Stanley.framework; sourceTree = "<group>"; };
+		07A5492D1E7C68AA00A6C4A1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		07A5492F1E7C690E00A6C4A1 /* Stanley.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Stanley.framework; path = "../../Library/Developer/Xcode/DerivedData/Baxter-evreckdgsbnsgedxypslwdrqivls/Build/Products/Debug/Stanley.framework"; sourceTree = "<group>"; };
+		07A549311E7C696400A6C4A1 /* BaxterTests-macOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BaxterTests-macOS-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +116,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		07A549011E7C677300A6C4A1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07A549301E7C690E00A6C4A1 /* Stanley.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07A5491D1E7C689000A6C4A1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07A5492E1E7C68AA00A6C4A1 /* CoreData.framework in Frameworks */,
+				07A5492C1E7C68A500A6C4A1 /* Stanley.framework in Frameworks */,
+				07A549251E7C689000A6C4A1 /* Baxter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -101,6 +152,8 @@
 			children = (
 				07A548C11E7C599600A6C4A1 /* Baxter.framework */,
 				07A548D51E7C5B7A00A6C4A1 /* BaxterTests-iOS.xctest */,
+				07A549051E7C677300A6C4A1 /* Baxter.framework */,
+				07A549201E7C689000A6C4A1 /* BaxterTests-macOS.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -119,6 +172,7 @@
 			isa = PBXGroup;
 			children = (
 				07A548C51E7C599600A6C4A1 /* Baxter-iOS-Info.plist */,
+				07A5490E1E7C680000A6C4A1 /* Baxter-macOS-Info.plist */,
 				07A548CB1E7C59D100A6C4A1 /* Baxter-Info.h */,
 			);
 			name = "Supporting Files";
@@ -145,6 +199,9 @@
 		07A548E01E7C5CB800A6C4A1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				07A5492F1E7C690E00A6C4A1 /* Stanley.framework */,
+				07A5492D1E7C68AA00A6C4A1 /* CoreData.framework */,
+				07A5492B1E7C68A500A6C4A1 /* Stanley.framework */,
 				07A548FB1E7C647F00A6C4A1 /* Stanley.framework */,
 				07A548E71E7C5E1500A6C4A1 /* Stanley.framework */,
 				07A548E11E7C5CB800A6C4A1 /* CoreData.framework */,
@@ -168,12 +225,9 @@
 			children = (
 				07A548EB1E7C5FE700A6C4A1 /* KBAManagedObjectEntityMapping.h */,
 				07A548ED1E7C604C00A6C4A1 /* KBAManagedObjectPropertyMapping.h */,
-				07A548EF1E7C60BC00A6C4A1 /* KBADefaultManagedObjectEntityMapping.h */,
-				07A548F01E7C60BC00A6C4A1 /* KBADefaultManagedObjectEntityMapping.m */,
-				07A548F31E7C613800A6C4A1 /* KBADefaultManagedObjectPropertyMapping.h */,
-				07A548F41E7C613800A6C4A1 /* KBADefaultManagedObjectPropertyMapping.m */,
 				07A548F71E7C622200A6C4A1 /* NSManagedObjectContext+KBAImportExtensions.h */,
 				07A548F81E7C622200A6C4A1 /* NSManagedObjectContext+KBAImportExtensions.m */,
+				07A5490D1E7C67A000A6C4A1 /* Private */,
 			);
 			name = Import;
 			sourceTree = "<group>";
@@ -182,9 +236,21 @@
 			isa = PBXGroup;
 			children = (
 				07A548D91E7C5B7A00A6C4A1 /* BaxterTests-iOS-Info.plist */,
+				07A549311E7C696400A6C4A1 /* BaxterTests-macOS-Info.plist */,
 				07A548FE1E7C658C00A6C4A1 /* Test.xcdatamodel */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		07A5490D1E7C67A000A6C4A1 /* Private */ = {
+			isa = PBXGroup;
+			children = (
+				07A548EF1E7C60BC00A6C4A1 /* KBADefaultManagedObjectEntityMapping.h */,
+				07A548F01E7C60BC00A6C4A1 /* KBADefaultManagedObjectEntityMapping.m */,
+				07A548F31E7C613800A6C4A1 /* KBADefaultManagedObjectPropertyMapping.h */,
+				07A548F41E7C613800A6C4A1 /* KBADefaultManagedObjectPropertyMapping.m */,
+			);
+			path = Private;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,6 +268,21 @@
 				07A548E51E7C5CCF00A6C4A1 /* NSManagedObjectContext+KBAExtensions.h in Headers */,
 				07A548CF1E7C5AD000A6C4A1 /* NSFetchRequest+KBAExtensions.h in Headers */,
 				07A548EE1E7C604C00A6C4A1 /* KBAManagedObjectPropertyMapping.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07A549021E7C677300A6C4A1 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07A549141E7C684B00A6C4A1 /* KBAManagedObjectEntityMapping.h in Headers */,
+				07A5490F1E7C684B00A6C4A1 /* Baxter.h in Headers */,
+				07A549181E7C684B00A6C4A1 /* KBADefaultManagedObjectEntityMapping.h in Headers */,
+				07A549121E7C684B00A6C4A1 /* NSManagedObjectContext+KBAExtensions.h in Headers */,
+				07A549101E7C684B00A6C4A1 /* NSFetchRequest+KBAExtensions.h in Headers */,
+				07A549161E7C684B00A6C4A1 /* NSManagedObjectContext+KBAImportExtensions.h in Headers */,
+				07A5491A1E7C684B00A6C4A1 /* KBADefaultManagedObjectPropertyMapping.h in Headers */,
+				07A549151E7C684B00A6C4A1 /* KBAManagedObjectPropertyMapping.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,6 +325,42 @@
 			productReference = 07A548D51E7C5B7A00A6C4A1 /* BaxterTests-iOS.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		07A549041E7C677300A6C4A1 /* Baxter-macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 07A5490A1E7C677300A6C4A1 /* Build configuration list for PBXNativeTarget "Baxter-macOS" */;
+			buildPhases = (
+				07A549001E7C677300A6C4A1 /* Sources */,
+				07A549011E7C677300A6C4A1 /* Frameworks */,
+				07A549021E7C677300A6C4A1 /* Headers */,
+				07A549031E7C677300A6C4A1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Baxter-macOS";
+			productName = "Baxter-macOS";
+			productReference = 07A549051E7C677300A6C4A1 /* Baxter.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		07A5491F1E7C689000A6C4A1 /* BaxterTests-macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 07A549281E7C689000A6C4A1 /* Build configuration list for PBXNativeTarget "BaxterTests-macOS" */;
+			buildPhases = (
+				07A5491C1E7C689000A6C4A1 /* Sources */,
+				07A5491D1E7C689000A6C4A1 /* Frameworks */,
+				07A5491E1E7C689000A6C4A1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				07A549271E7C689000A6C4A1 /* PBXTargetDependency */,
+			);
+			name = "BaxterTests-macOS";
+			productName = "BaxterTests-macOS";
+			productReference = 07A549201E7C689000A6C4A1 /* BaxterTests-macOS.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -262,6 +379,14 @@
 						CreatedOnToolsVersion = 8.2.1;
 						ProvisioningStyle = Automatic;
 					};
+					07A549041E7C677300A6C4A1 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
+					07A5491F1E7C689000A6C4A1 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = 07A548B91E7C577F00A6C4A1 /* Build configuration list for PBXProject "Baxter" */;
@@ -277,7 +402,9 @@
 			projectRoot = "";
 			targets = (
 				07A548C01E7C599600A6C4A1 /* Baxter-iOS */,
+				07A549041E7C677300A6C4A1 /* Baxter-macOS */,
 				07A548D41E7C5B7A00A6C4A1 /* BaxterTests-iOS */,
+				07A5491F1E7C689000A6C4A1 /* BaxterTests-macOS */,
 			);
 		};
 /* End PBXProject section */
@@ -291,6 +418,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		07A548D31E7C5B7A00A6C4A1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07A549031E7C677300A6C4A1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07A5491E1E7C689000A6C4A1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -321,6 +462,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		07A549001E7C677300A6C4A1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07A549131E7C684B00A6C4A1 /* NSManagedObjectContext+KBAExtensions.m in Sources */,
+				07A549191E7C684B00A6C4A1 /* KBADefaultManagedObjectEntityMapping.m in Sources */,
+				07A5491B1E7C684B00A6C4A1 /* KBADefaultManagedObjectPropertyMapping.m in Sources */,
+				07A549111E7C684B00A6C4A1 /* NSFetchRequest+KBAExtensions.m in Sources */,
+				07A549171E7C684B00A6C4A1 /* NSManagedObjectContext+KBAImportExtensions.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07A5491C1E7C689000A6C4A1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07A549331E7C696D00A6C4A1 /* KBANSManagedObjectContextImportExtensionsTextCase.m in Sources */,
+				07A549321E7C696900A6C4A1 /* Test.xcdatamodel in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -328,6 +490,11 @@
 			isa = PBXTargetDependency;
 			target = 07A548C01E7C599600A6C4A1 /* Baxter-iOS */;
 			targetProxy = 07A548DB1E7C5B7A00A6C4A1 /* PBXContainerItemProxy */;
+		};
+		07A549271E7C689000A6C4A1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 07A549041E7C677300A6C4A1 /* Baxter-macOS */;
+			targetProxy = 07A549261E7C689000A6C4A1 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -580,6 +747,234 @@
 			};
 			name = Release;
 		};
+		07A5490B1E7C677300A6C4A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/Vendor/Stanley";
+				INFOPLIST_FILE = "$(SRCROOT)/Baxter/Baxter-macOS-Info.plist";
+				INFOPLIST_PREFIX_HEADER = "$(SRCROOT)/Baxter/Baxter-Info.h";
+				INFOPLIST_PREPROCESS = YES;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kosoku.baxter;
+				PRODUCT_NAME = Baxter;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		07A5490C1E7C677300A6C4A1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/Vendor/Stanley";
+				INFOPLIST_FILE = "$(SRCROOT)/Baxter/Baxter-macOS-Info.plist";
+				INFOPLIST_PREFIX_HEADER = "$(SRCROOT)/Baxter/Baxter-Info.h";
+				INFOPLIST_PREPROCESS = YES;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kosoku.baxter;
+				PRODUCT_NAME = Baxter;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		07A549291E7C689000A6C4A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Vendor/Stanley/build/Debug",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/BaxterTests/$(TARGET_NAME)-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kosoku.BaxterTests-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		07A5492A1E7C689000A6C4A1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Vendor/Stanley/build/Debug",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/BaxterTests/$(TARGET_NAME)-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kosoku.BaxterTests-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -609,6 +1004,22 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		07A5490A1E7C677300A6C4A1 /* Build configuration list for PBXNativeTarget "Baxter-macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07A5490B1E7C677300A6C4A1 /* Debug */,
+				07A5490C1E7C677300A6C4A1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		07A549281E7C689000A6C4A1 /* Build configuration list for PBXNativeTarget "BaxterTests-macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07A549291E7C689000A6C4A1 /* Debug */,
+				07A5492A1E7C689000A6C4A1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

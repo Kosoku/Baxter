@@ -1485,6 +1485,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/Vendor/Stanley";
 				INFOPLIST_FILE = "$(SRCROOT)/Baxter/Baxter-watchOS-Info.plist";
 				INFOPLIST_PREFIX_HEADER = "$(SRCROOT)/Baxter/Baxter-Info.h";
 				INFOPLIST_PREPROCESS = YES;
@@ -1543,6 +1544,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/Vendor/Stanley";
 				INFOPLIST_FILE = "$(SRCROOT)/Baxter/Baxter-watchOS-Info.plist";
 				INFOPLIST_PREFIX_HEADER = "$(SRCROOT)/Baxter/Baxter-Info.h";
 				INFOPLIST_PREPROCESS = YES;
@@ -1598,6 +1600,7 @@
 				07A5490C1E7C677300A6C4A1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		07A549281E7C689000A6C4A1 /* Build configuration list for PBXNativeTarget "BaxterTests-macOS" */ = {
 			isa = XCConfigurationList;
@@ -1606,6 +1609,7 @@
 				07A5492A1E7C689000A6C4A1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		07A5493E1E7C699C00A6C4A1 /* Build configuration list for PBXNativeTarget "Baxter-tvOS" */ = {
 			isa = XCConfigurationList;
@@ -1614,6 +1618,7 @@
 				07A549401E7C699C00A6C4A1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		07A549561E7C6A5200A6C4A1 /* Build configuration list for PBXNativeTarget "BaxterTests-tvOS" */ = {
 			isa = XCConfigurationList;
@@ -1622,6 +1627,7 @@
 				07A549581E7C6A5200A6C4A1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		07A549711E7C6B6000A6C4A1 /* Build configuration list for PBXNativeTarget "Baxter-watchOS" */ = {
 			isa = XCConfigurationList;
@@ -1630,6 +1636,7 @@
 				07A549731E7C6B6000A6C4A1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

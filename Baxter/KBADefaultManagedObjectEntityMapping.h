@@ -1,5 +1,5 @@
 //
-//  Baxter.h
+//  KBADefaultManagedObjectEntityMapping.h
 //  Baxter
 //
 //  Created by William Towe on 3/17/17.
@@ -15,15 +15,8 @@
 
 #import <Foundation/Foundation.h>
 
-//! Project version number for Baxter.
-FOUNDATION_EXPORT double BaxterVersionNumber;
+#import <Baxter/KBAManagedObjectEntityMapping.h>
 
-//! Project version string for Baxter.
-FOUNDATION_EXPORT const unsigned char BaxterVersionString[];
+@interface KBADefaultManagedObjectEntityMapping : NSObject <KBAManagedObjectEntityMapping>
 
-// In this header, you should import all the public headers of your framework using statements like #import <Baxter/PublicHeader.h>
-
-#import <Baxter/NSFetchRequest+KBAExtensions.h>
-#import <Baxter/NSManagedObjectContext+KBAExtensions.h>
-
-#import <Baxter/NSManagedObjectContext+KBAImportExtensions.h>
+@end

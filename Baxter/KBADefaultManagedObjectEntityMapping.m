@@ -1,5 +1,5 @@
 //
-//  Baxter.h
+//  KBADefaultManagedObjectEntityMapping.m
 //  Baxter
 //
 //  Created by William Towe on 3/17/17.
@@ -13,17 +13,18 @@
 //
 //  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-#import <Foundation/Foundation.h>
+#import "KBADefaultManagedObjectEntityMapping.h"
 
-//! Project version number for Baxter.
-FOUNDATION_EXPORT double BaxterVersionNumber;
+#import <Stanley/KSTSnakeCaseToLlamaCaseValueTransformer.h>
 
-//! Project version string for Baxter.
-FOUNDATION_EXPORT const unsigned char BaxterVersionString[];
+@implementation KBADefaultManagedObjectEntityMapping
 
-// In this header, you should import all the public headers of your framework using statements like #import <Baxter/PublicHeader.h>
+- (NSString *)entityNameForJSONEntityName:(NSString *)JSONName {
+    return [[[NSValueTransformer valueTransformerForName:KSTSnakeCaseToLlamaCaseValueTransformerName] transformedValue:JSONName] capitalizedString];
+}
 
-#import <Baxter/NSFetchRequest+KBAExtensions.h>
-#import <Baxter/NSManagedObjectContext+KBAExtensions.h>
+- (NSString *)JSONEntityNameForEntityName:(NSString *)entityName {
+    return [[NSValueTransformer valueTransformerForName:KSTSnakeCaseToLlamaCaseValueTransformerName] reverseTransformedValue:entityName];
+}
 
-#import <Baxter/NSManagedObjectContext+KBAImportExtensions.h>
+@end

@@ -1,5 +1,5 @@
 //
-//  Baxter.h
+//  KBAManagedObjectEntityMapping.h
 //  Baxter
 //
 //  Created by William Towe on 3/17/17.
@@ -15,15 +15,28 @@
 
 #import <Foundation/Foundation.h>
 
-//! Project version number for Baxter.
-FOUNDATION_EXPORT double BaxterVersionNumber;
+NS_ASSUME_NONNULL_BEGIN
 
-//! Project version string for Baxter.
-FOUNDATION_EXPORT const unsigned char BaxterVersionString[];
+/**
+ Protocol for objects that map JSON keys to entity names.
+ */
+@protocol KBAManagedObjectEntityMapping <NSObject>
+@required
+/**
+ Return the entity name for JSON key. For example, `my_document` -> `MyDocument`.
+ 
+ @parm JSONName The JSON name
+ @return The entity name
+ */
+- (NSString *)entityNameForJSONEntityName:(NSString *)JSONName;
+@optional
+/**
+ Return the JSON key for entity name. For example, `MyDocument` -> `my_document`.
+ 
+ @param entityName The entity name
+ @return The JSON name
+ */
+- (NSString *)JSONEntityNameForEntityName:(NSString *)entityName;
+@end
 
-// In this header, you should import all the public headers of your framework using statements like #import <Baxter/PublicHeader.h>
-
-#import <Baxter/NSFetchRequest+KBAExtensions.h>
-#import <Baxter/NSManagedObjectContext+KBAExtensions.h>
-
-#import <Baxter/NSManagedObjectContext+KBAImportExtensions.h>
+NS_ASSUME_NONNULL_END

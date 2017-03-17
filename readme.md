@@ -6,4 +6,4 @@
 [![Platform](http://img.shields.io/cocoapods/p/Baxter.svg)]()
 [![License](http://img.shields.io/cocoapods/l/Baxter.svg)](https://github.com/Kosoku/Baxter/blob/master/license.txt)
 
-Baxter is a iOS/macOS/tvOS/watchOS framework that extends the `CoreData` framework.
+Baxter is a iOS/macOS/tvOS/watchOS framework that extends the `CoreData` framework. It provides methods to simplify fetching and importing.

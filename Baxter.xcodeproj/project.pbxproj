@@ -12,6 +12,10 @@
 		07A548D01E7C5AD000A6C4A1 /* NSFetchRequest+KBAExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A548CE1E7C5AD000A6C4A1 /* NSFetchRequest+KBAExtensions.m */; };
 		07A548D81E7C5B7A00A6C4A1 /* BaxterTests_iOS.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A548D71E7C5B7A00A6C4A1 /* BaxterTests_iOS.m */; };
 		07A548DA1E7C5B7A00A6C4A1 /* Baxter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07A548C11E7C599600A6C4A1 /* Baxter.framework */; };
+		07A548E21E7C5CB800A6C4A1 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07A548E11E7C5CB800A6C4A1 /* CoreData.framework */; };
+		07A548E51E7C5CCF00A6C4A1 /* NSManagedObjectContext+KBAExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 07A548E31E7C5CCF00A6C4A1 /* NSManagedObjectContext+KBAExtensions.h */; };
+		07A548E61E7C5CCF00A6C4A1 /* NSManagedObjectContext+KBAExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A548E41E7C5CCF00A6C4A1 /* NSManagedObjectContext+KBAExtensions.m */; };
+		07A548E81E7C5E1500A6C4A1 /* Stanley.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07A548E71E7C5E1500A6C4A1 /* Stanley.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +38,10 @@
 		07A548D51E7C5B7A00A6C4A1 /* BaxterTests-iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BaxterTests-iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		07A548D71E7C5B7A00A6C4A1 /* BaxterTests_iOS.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaxterTests_iOS.m; sourceTree = "<group>"; };
 		07A548D91E7C5B7A00A6C4A1 /* BaxterTests-iOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BaxterTests-iOS-Info.plist"; sourceTree = "<group>"; };
+		07A548E11E7C5CB800A6C4A1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.2.sdk/System/Library/Frameworks/CoreData.framework; sourceTree = DEVELOPER_DIR; };
+		07A548E31E7C5CCF00A6C4A1 /* NSManagedObjectContext+KBAExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObjectContext+KBAExtensions.h"; sourceTree = "<group>"; };
+		07A548E41E7C5CCF00A6C4A1 /* NSManagedObjectContext+KBAExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObjectContext+KBAExtensions.m"; sourceTree = "<group>"; };
+		07A548E71E7C5E1500A6C4A1 /* Stanley.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Stanley.framework; path = "Vendor/Stanley/build/Debug-iphoneos/Stanley.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +56,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07A548E81E7C5E1500A6C4A1 /* Stanley.framework in Frameworks */,
+				07A548E21E7C5CB800A6C4A1 /* CoreData.framework in Frameworks */,
 				07A548DA1E7C5B7A00A6C4A1 /* Baxter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -61,6 +71,7 @@
 				07A548C31E7C599600A6C4A1 /* Baxter */,
 				07A548D61E7C5B7A00A6C4A1 /* BaxterTests */,
 				07A548C21E7C599600A6C4A1 /* Products */,
+				07A548E01E7C5CB800A6C4A1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,6 +108,8 @@
 			children = (
 				07A548CD1E7C5AD000A6C4A1 /* NSFetchRequest+KBAExtensions.h */,
 				07A548CE1E7C5AD000A6C4A1 /* NSFetchRequest+KBAExtensions.m */,
+				07A548E31E7C5CCF00A6C4A1 /* NSManagedObjectContext+KBAExtensions.h */,
+				07A548E41E7C5CCF00A6C4A1 /* NSManagedObjectContext+KBAExtensions.m */,
 			);
 			name = Source;
 			sourceTree = "<group>";
@@ -110,6 +123,15 @@
 			path = BaxterTests;
 			sourceTree = "<group>";
 		};
+		07A548E01E7C5CB800A6C4A1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				07A548E71E7C5E1500A6C4A1 /* Stanley.framework */,
+				07A548E11E7C5CB800A6C4A1 /* CoreData.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -118,6 +140,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				07A548C61E7C599600A6C4A1 /* Baxter.h in Headers */,
+				07A548E51E7C5CCF00A6C4A1 /* NSManagedObjectContext+KBAExtensions.h in Headers */,
 				07A548CF1E7C5AD000A6C4A1 /* NSFetchRequest+KBAExtensions.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -221,6 +244,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07A548E61E7C5CCF00A6C4A1 /* NSManagedObjectContext+KBAExtensions.m in Sources */,
 				07A548D01E7C5AD000A6C4A1 /* NSFetchRequest+KBAExtensions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -302,6 +326,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/Vendor/Stanley";
 				INFOPLIST_FILE = "$(SRCROOT)/Baxter/Baxter-iOS-Info.plist";
 				INFOPLIST_PREFIX_HEADER = "$(SRCROOT)/Baxter/Baxter-Info.h";
 				INFOPLIST_PREPROCESS = YES;
@@ -360,6 +385,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/Vendor/Stanley";
 				INFOPLIST_FILE = "$(SRCROOT)/Baxter/Baxter-iOS-Info.plist";
 				INFOPLIST_PREFIX_HEADER = "$(SRCROOT)/Baxter/Baxter-Info.h";
 				INFOPLIST_PREPROCESS = YES;
@@ -404,6 +430,10 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Vendor/Stanley/build/Debug-iphoneos",
+				);
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -455,6 +485,10 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Vendor/Stanley/build/Debug-iphoneos",
+				);
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -493,6 +527,7 @@
 				07A548C91E7C599600A6C4A1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		07A548DD1E7C5B7A00A6C4A1 /* Build configuration list for PBXNativeTarget "BaxterTests-iOS" */ = {
 			isa = XCConfigurationList;
@@ -501,6 +536,7 @@
 				07A548DF1E7C5B7A00A6C4A1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

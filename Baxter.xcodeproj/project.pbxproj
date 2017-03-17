@@ -45,6 +45,25 @@
 		07A549301E7C690E00A6C4A1 /* Stanley.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07A5492F1E7C690E00A6C4A1 /* Stanley.framework */; };
 		07A549321E7C696900A6C4A1 /* Test.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 07A548FE1E7C658C00A6C4A1 /* Test.xcdatamodel */; };
 		07A549331E7C696D00A6C4A1 /* KBANSManagedObjectContextImportExtensionsTextCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A548D71E7C5B7A00A6C4A1 /* KBANSManagedObjectContextImportExtensionsTextCase.m */; };
+		07A549421E7C6A3600A6C4A1 /* Baxter.h in Headers */ = {isa = PBXBuildFile; fileRef = 07A548C41E7C599600A6C4A1 /* Baxter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		07A549431E7C6A3600A6C4A1 /* NSFetchRequest+KBAExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 07A548CD1E7C5AD000A6C4A1 /* NSFetchRequest+KBAExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		07A549441E7C6A3600A6C4A1 /* NSManagedObjectContext+KBAExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 07A548E31E7C5CCF00A6C4A1 /* NSManagedObjectContext+KBAExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		07A549451E7C6A3600A6C4A1 /* KBAManagedObjectEntityMapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 07A548EB1E7C5FE700A6C4A1 /* KBAManagedObjectEntityMapping.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		07A549461E7C6A3600A6C4A1 /* KBAManagedObjectPropertyMapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 07A548ED1E7C604C00A6C4A1 /* KBAManagedObjectPropertyMapping.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		07A549471E7C6A3600A6C4A1 /* NSManagedObjectContext+KBAImportExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 07A548F71E7C622200A6C4A1 /* NSManagedObjectContext+KBAImportExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		07A549481E7C6A3600A6C4A1 /* KBADefaultManagedObjectEntityMapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 07A548EF1E7C60BC00A6C4A1 /* KBADefaultManagedObjectEntityMapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		07A549491E7C6A3600A6C4A1 /* KBADefaultManagedObjectPropertyMapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 07A548F31E7C613800A6C4A1 /* KBADefaultManagedObjectPropertyMapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		07A549531E7C6A5200A6C4A1 /* Baxter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07A549391E7C699C00A6C4A1 /* Baxter.framework */; };
+		07A5495A1E7C6AA700A6C4A1 /* KBANSManagedObjectContextImportExtensionsTextCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A548D71E7C5B7A00A6C4A1 /* KBANSManagedObjectContextImportExtensionsTextCase.m */; };
+		07A5495B1E7C6AAB00A6C4A1 /* Test.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 07A548FE1E7C658C00A6C4A1 /* Test.xcdatamodel */; };
+		07A5495C1E7C6AF900A6C4A1 /* NSFetchRequest+KBAExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A548CE1E7C5AD000A6C4A1 /* NSFetchRequest+KBAExtensions.m */; };
+		07A5495D1E7C6AF900A6C4A1 /* NSManagedObjectContext+KBAExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A548E41E7C5CCF00A6C4A1 /* NSManagedObjectContext+KBAExtensions.m */; };
+		07A5495E1E7C6AF900A6C4A1 /* NSManagedObjectContext+KBAImportExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A548F81E7C622200A6C4A1 /* NSManagedObjectContext+KBAImportExtensions.m */; };
+		07A5495F1E7C6AF900A6C4A1 /* KBADefaultManagedObjectEntityMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A548F01E7C60BC00A6C4A1 /* KBADefaultManagedObjectEntityMapping.m */; };
+		07A549601E7C6AF900A6C4A1 /* KBADefaultManagedObjectPropertyMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A548F41E7C613800A6C4A1 /* KBADefaultManagedObjectPropertyMapping.m */; };
+		07A549621E7C6B2000A6C4A1 /* Stanley.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07A549611E7C6B2000A6C4A1 /* Stanley.framework */; };
+		07A549641E7C6B3C00A6C4A1 /* Stanley.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07A549631E7C6B3C00A6C4A1 /* Stanley.framework */; };
+		07A549661E7C6B4000A6C4A1 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07A549651E7C6B4000A6C4A1 /* CoreData.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +80,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 07A549041E7C677300A6C4A1;
 			remoteInfo = "Baxter-macOS";
+		};
+		07A549541E7C6A5200A6C4A1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 07A548B61E7C577F00A6C4A1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 07A549381E7C699C00A6C4A1;
+			remoteInfo = "Baxter-tvOS";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -95,6 +121,13 @@
 		07A5492D1E7C68AA00A6C4A1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		07A5492F1E7C690E00A6C4A1 /* Stanley.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Stanley.framework; path = "../../Library/Developer/Xcode/DerivedData/Baxter-evreckdgsbnsgedxypslwdrqivls/Build/Products/Debug/Stanley.framework"; sourceTree = "<group>"; };
 		07A549311E7C696400A6C4A1 /* BaxterTests-macOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BaxterTests-macOS-Info.plist"; sourceTree = "<group>"; };
+		07A549391E7C699C00A6C4A1 /* Baxter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Baxter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		07A549411E7C69CE00A6C4A1 /* Baxter-tvOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Baxter-tvOS-Info.plist"; sourceTree = "<group>"; };
+		07A5494E1E7C6A5200A6C4A1 /* BaxterTests-tvOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BaxterTests-tvOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		07A549591E7C6A7700A6C4A1 /* BaxterTests-tvOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BaxterTests-tvOS-Info.plist"; sourceTree = "<group>"; };
+		07A549611E7C6B2000A6C4A1 /* Stanley.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Stanley.framework; path = "Vendor/Stanley/build/Debug-appletvos/Stanley.framework"; sourceTree = "<group>"; };
+		07A549631E7C6B3C00A6C4A1 /* Stanley.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Stanley.framework; path = "../../Library/Developer/Xcode/DerivedData/Baxter-evreckdgsbnsgedxypslwdrqivls/Build/Products/Debug-appletvsimulator/Stanley.framework"; sourceTree = "<group>"; };
+		07A549651E7C6B4000A6C4A1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS10.1.sdk/System/Library/Frameworks/CoreData.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +167,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		07A549351E7C699C00A6C4A1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07A549621E7C6B2000A6C4A1 /* Stanley.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07A5494B1E7C6A5200A6C4A1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07A549661E7C6B4000A6C4A1 /* CoreData.framework in Frameworks */,
+				07A549641E7C6B3C00A6C4A1 /* Stanley.framework in Frameworks */,
+				07A549531E7C6A5200A6C4A1 /* Baxter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -154,6 +205,8 @@
 				07A548D51E7C5B7A00A6C4A1 /* BaxterTests-iOS.xctest */,
 				07A549051E7C677300A6C4A1 /* Baxter.framework */,
 				07A549201E7C689000A6C4A1 /* BaxterTests-macOS.xctest */,
+				07A549391E7C699C00A6C4A1 /* Baxter.framework */,
+				07A5494E1E7C6A5200A6C4A1 /* BaxterTests-tvOS.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -173,6 +226,7 @@
 			children = (
 				07A548C51E7C599600A6C4A1 /* Baxter-iOS-Info.plist */,
 				07A5490E1E7C680000A6C4A1 /* Baxter-macOS-Info.plist */,
+				07A549411E7C69CE00A6C4A1 /* Baxter-tvOS-Info.plist */,
 				07A548CB1E7C59D100A6C4A1 /* Baxter-Info.h */,
 			);
 			name = "Supporting Files";
@@ -199,6 +253,9 @@
 		07A548E01E7C5CB800A6C4A1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				07A549651E7C6B4000A6C4A1 /* CoreData.framework */,
+				07A549631E7C6B3C00A6C4A1 /* Stanley.framework */,
+				07A549611E7C6B2000A6C4A1 /* Stanley.framework */,
 				07A5492F1E7C690E00A6C4A1 /* Stanley.framework */,
 				07A5492D1E7C68AA00A6C4A1 /* CoreData.framework */,
 				07A5492B1E7C68A500A6C4A1 /* Stanley.framework */,
@@ -237,6 +294,7 @@
 			children = (
 				07A548D91E7C5B7A00A6C4A1 /* BaxterTests-iOS-Info.plist */,
 				07A549311E7C696400A6C4A1 /* BaxterTests-macOS-Info.plist */,
+				07A549591E7C6A7700A6C4A1 /* BaxterTests-tvOS-Info.plist */,
 				07A548FE1E7C658C00A6C4A1 /* Test.xcdatamodel */,
 			);
 			name = "Supporting Files";
@@ -283,6 +341,21 @@
 				07A549161E7C684B00A6C4A1 /* NSManagedObjectContext+KBAImportExtensions.h in Headers */,
 				07A5491A1E7C684B00A6C4A1 /* KBADefaultManagedObjectPropertyMapping.h in Headers */,
 				07A549151E7C684B00A6C4A1 /* KBAManagedObjectPropertyMapping.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07A549361E7C699C00A6C4A1 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07A549451E7C6A3600A6C4A1 /* KBAManagedObjectEntityMapping.h in Headers */,
+				07A549421E7C6A3600A6C4A1 /* Baxter.h in Headers */,
+				07A549481E7C6A3600A6C4A1 /* KBADefaultManagedObjectEntityMapping.h in Headers */,
+				07A549441E7C6A3600A6C4A1 /* NSManagedObjectContext+KBAExtensions.h in Headers */,
+				07A549431E7C6A3600A6C4A1 /* NSFetchRequest+KBAExtensions.h in Headers */,
+				07A549471E7C6A3600A6C4A1 /* NSManagedObjectContext+KBAImportExtensions.h in Headers */,
+				07A549491E7C6A3600A6C4A1 /* KBADefaultManagedObjectPropertyMapping.h in Headers */,
+				07A549461E7C6A3600A6C4A1 /* KBAManagedObjectPropertyMapping.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,6 +434,42 @@
 			productReference = 07A549201E7C689000A6C4A1 /* BaxterTests-macOS.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		07A549381E7C699C00A6C4A1 /* Baxter-tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 07A5493E1E7C699C00A6C4A1 /* Build configuration list for PBXNativeTarget "Baxter-tvOS" */;
+			buildPhases = (
+				07A549341E7C699C00A6C4A1 /* Sources */,
+				07A549351E7C699C00A6C4A1 /* Frameworks */,
+				07A549361E7C699C00A6C4A1 /* Headers */,
+				07A549371E7C699C00A6C4A1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Baxter-tvOS";
+			productName = "Baxter-tvOS";
+			productReference = 07A549391E7C699C00A6C4A1 /* Baxter.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		07A5494D1E7C6A5200A6C4A1 /* BaxterTests-tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 07A549561E7C6A5200A6C4A1 /* Build configuration list for PBXNativeTarget "BaxterTests-tvOS" */;
+			buildPhases = (
+				07A5494A1E7C6A5200A6C4A1 /* Sources */,
+				07A5494B1E7C6A5200A6C4A1 /* Frameworks */,
+				07A5494C1E7C6A5200A6C4A1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				07A549551E7C6A5200A6C4A1 /* PBXTargetDependency */,
+			);
+			name = "BaxterTests-tvOS";
+			productName = "BaxterTests-tvOS";
+			productReference = 07A5494E1E7C6A5200A6C4A1 /* BaxterTests-tvOS.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -387,6 +496,14 @@
 						CreatedOnToolsVersion = 8.2.1;
 						ProvisioningStyle = Automatic;
 					};
+					07A549381E7C699C00A6C4A1 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
+					07A5494D1E7C6A5200A6C4A1 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = 07A548B91E7C577F00A6C4A1 /* Build configuration list for PBXProject "Baxter" */;
@@ -403,8 +520,10 @@
 			targets = (
 				07A548C01E7C599600A6C4A1 /* Baxter-iOS */,
 				07A549041E7C677300A6C4A1 /* Baxter-macOS */,
+				07A549381E7C699C00A6C4A1 /* Baxter-tvOS */,
 				07A548D41E7C5B7A00A6C4A1 /* BaxterTests-iOS */,
 				07A5491F1E7C689000A6C4A1 /* BaxterTests-macOS */,
+				07A5494D1E7C6A5200A6C4A1 /* BaxterTests-tvOS */,
 			);
 		};
 /* End PBXProject section */
@@ -432,6 +551,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		07A5491E1E7C689000A6C4A1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07A549371E7C699C00A6C4A1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07A5494C1E7C6A5200A6C4A1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -483,6 +616,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		07A549341E7C699C00A6C4A1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07A5495D1E7C6AF900A6C4A1 /* NSManagedObjectContext+KBAExtensions.m in Sources */,
+				07A5495F1E7C6AF900A6C4A1 /* KBADefaultManagedObjectEntityMapping.m in Sources */,
+				07A549601E7C6AF900A6C4A1 /* KBADefaultManagedObjectPropertyMapping.m in Sources */,
+				07A5495C1E7C6AF900A6C4A1 /* NSFetchRequest+KBAExtensions.m in Sources */,
+				07A5495E1E7C6AF900A6C4A1 /* NSManagedObjectContext+KBAImportExtensions.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07A5494A1E7C6A5200A6C4A1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07A5495B1E7C6AAB00A6C4A1 /* Test.xcdatamodel in Sources */,
+				07A5495A1E7C6AA700A6C4A1 /* KBANSManagedObjectContextImportExtensionsTextCase.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -495,6 +649,11 @@
 			isa = PBXTargetDependency;
 			target = 07A549041E7C677300A6C4A1 /* Baxter-macOS */;
 			targetProxy = 07A549261E7C689000A6C4A1 /* PBXContainerItemProxy */;
+		};
+		07A549551E7C6A5200A6C4A1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 07A549381E7C699C00A6C4A1 /* Baxter-tvOS */;
+			targetProxy = 07A549541E7C6A5200A6C4A1 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -975,6 +1134,230 @@
 			};
 			name = Release;
 		};
+		07A5493F1E7C699C00A6C4A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Vendor/Stanley/build/Debug-appletvos",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/Vendor/Stanley";
+				INFOPLIST_FILE = "$(SRCROOT)/Baxter/Baxter-tvOS-Info.plist";
+				INFOPLIST_PREFIX_HEADER = "$(SRCROOT)/Baxter/Baxter-Info.h";
+				INFOPLIST_PREPROCESS = YES;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kosoku.baxter;
+				PRODUCT_NAME = Baxter;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 10.1;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		07A549401E7C699C00A6C4A1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Vendor/Stanley/build/Debug-appletvos",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/Vendor/Stanley";
+				INFOPLIST_FILE = "$(SRCROOT)/Baxter/Baxter-tvOS-Info.plist";
+				INFOPLIST_PREFIX_HEADER = "$(SRCROOT)/Baxter/Baxter-Info.h";
+				INFOPLIST_PREPROCESS = YES;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kosoku.baxter;
+				PRODUCT_NAME = Baxter;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 10.1;
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		07A549571E7C6A5200A6C4A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/BaxterTests/$(TARGET_NAME)-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kosoku.BaxterTests-tvOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				TVOS_DEPLOYMENT_TARGET = 10.1;
+			};
+			name = Debug;
+		};
+		07A549581E7C6A5200A6C4A1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/BaxterTests/$(TARGET_NAME)-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kosoku.BaxterTests-tvOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				TVOS_DEPLOYMENT_TARGET = 10.1;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1018,6 +1401,22 @@
 			buildConfigurations = (
 				07A549291E7C689000A6C4A1 /* Debug */,
 				07A5492A1E7C689000A6C4A1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		07A5493E1E7C699C00A6C4A1 /* Build configuration list for PBXNativeTarget "Baxter-tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07A5493F1E7C699C00A6C4A1 /* Debug */,
+				07A549401E7C699C00A6C4A1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		07A549561E7C6A5200A6C4A1 /* Build configuration list for PBXNativeTarget "BaxterTests-tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07A549571E7C6A5200A6C4A1 /* Debug */,
+				07A549581E7C6A5200A6C4A1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};

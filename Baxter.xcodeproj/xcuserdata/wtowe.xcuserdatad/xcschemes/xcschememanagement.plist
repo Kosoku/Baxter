@@ -14,15 +14,25 @@
 			<key>orderHint</key>
 			<integer>1</integer>
 		</dict>
-		<key>BaxterTests-iOS.xcscheme_^#shared#^_</key>
+		<key>Baxter-tvOS.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>2</integer>
 		</dict>
-		<key>BaxterTests-macOS.xcscheme_^#shared#^_</key>
+		<key>BaxterTests-iOS.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>3</integer>
+		</dict>
+		<key>BaxterTests-macOS.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
+		<key>BaxterTests-tvOS.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>5</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
@@ -43,6 +53,16 @@
 			<true/>
 		</dict>
 		<key>07A5491F1E7C689000A6C4A1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>07A549381E7C699C00A6C4A1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>07A5494D1E7C6A5200A6C4A1</key>
 		<dict>
 			<key>primary</key>
 			<true/>

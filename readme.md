@@ -1,4 +1,4 @@
-##Baxter
+## Baxter
 
 [![Build Status](https://travis-ci.org/Kosoku/Baxter.svg?branch=master)](https://travis-ci.org/Kosoku/Baxter)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
@@ -8,11 +8,11 @@
 
 *Baxter* is a iOS/macOS/tvOS/watchOS framework that extends the `CoreData` framework. It provides methods to simplify fetching and importing. It relies on the [Stanley](https://github.com/Kosoku/Stanley) framework.
 
-###Installation
+### Installation
 
 You can install *Baxter* using [cocoapods](https://cocoapods.org/), [Carthage](https://github.com/Carthage/Carthage), or as a framework. When installing as a framework, ensure you also link to [Stanley](https://github.com/Kosoku/Stanley) as *Baxter* relies on it.
 
-###Dependencies
+### Dependencies
 
 Third party:
 

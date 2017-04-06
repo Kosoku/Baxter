@@ -1,6 +1,7 @@
 ## Baxter
 
 [![Build Status](https://travis-ci.org/Kosoku/Baxter.svg?branch=master)](https://travis-ci.org/Kosoku/Baxter)
+[![codecov.io](http://codecov.io/github/Kosoku/Baxter/branch/master/graphs/badge.svg)](http://codecov.io/github/Kosoku/Baxter)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![Version](http://img.shields.io/cocoapods/v/Baxter.svg)](http://cocoapods.org/?q=Baxter)
 [![Platform](http://img.shields.io/cocoapods/p/Baxter.svg)]()

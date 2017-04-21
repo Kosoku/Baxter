@@ -78,6 +78,9 @@
 		07A5497F1E7C6C7D00A6C4A1 /* KBADefaultManagedObjectEntityMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A548F01E7C60BC00A6C4A1 /* KBADefaultManagedObjectEntityMapping.m */; };
 		07A549801E7C6C7D00A6C4A1 /* KBADefaultManagedObjectPropertyMapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 07A548F31E7C613800A6C4A1 /* KBADefaultManagedObjectPropertyMapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		07A549811E7C6C7D00A6C4A1 /* KBADefaultManagedObjectPropertyMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A548F41E7C613800A6C4A1 /* KBADefaultManagedObjectPropertyMapping.m */; };
+		07DED8871EAA546600C40F88 /* KBANSFetchRequestExtensionsTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DED8861EAA546600C40F88 /* KBANSFetchRequestExtensionsTestCase.m */; };
+		07DED8881EAA546600C40F88 /* KBANSFetchRequestExtensionsTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DED8861EAA546600C40F88 /* KBANSFetchRequestExtensionsTestCase.m */; };
+		07DED8891EAA546600C40F88 /* KBANSFetchRequestExtensionsTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DED8861EAA546600C40F88 /* KBANSFetchRequestExtensionsTestCase.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -145,6 +148,7 @@
 		07A549651E7C6B4000A6C4A1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS10.1.sdk/System/Library/Frameworks/CoreData.framework; sourceTree = DEVELOPER_DIR; };
 		07A5496C1E7C6B6000A6C4A1 /* Baxter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Baxter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		07A549741E7C6B8800A6C4A1 /* Baxter-watchOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Baxter-watchOS-Info.plist"; sourceTree = "<group>"; };
+		07DED8861EAA546600C40F88 /* KBANSFetchRequestExtensionsTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KBANSFetchRequestExtensionsTestCase.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -271,6 +275,7 @@
 		07A548D61E7C5B7A00A6C4A1 /* BaxterTests */ = {
 			isa = PBXGroup;
 			children = (
+				07DED8861EAA546600C40F88 /* KBANSFetchRequestExtensionsTestCase.m */,
 				07A548D71E7C5B7A00A6C4A1 /* KBANSManagedObjectContextImportExtensionsTextCase.m */,
 				07A548FD1E7C656D00A6C4A1 /* Supporting Files */,
 			);
@@ -664,6 +669,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				07A548FF1E7C658C00A6C4A1 /* Test.xcdatamodel in Sources */,
+				07DED8871EAA546600C40F88 /* KBANSFetchRequestExtensionsTestCase.m in Sources */,
 				07A548D81E7C5B7A00A6C4A1 /* KBANSManagedObjectContextImportExtensionsTextCase.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -685,6 +691,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				07A549331E7C696D00A6C4A1 /* KBANSManagedObjectContextImportExtensionsTextCase.m in Sources */,
+				07DED8881EAA546600C40F88 /* KBANSFetchRequestExtensionsTestCase.m in Sources */,
 				07A549321E7C696900A6C4A1 /* Test.xcdatamodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -706,6 +713,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				07A5495B1E7C6AAB00A6C4A1 /* Test.xcdatamodel in Sources */,
+				07DED8891EAA546600C40F88 /* KBANSFetchRequestExtensionsTestCase.m in Sources */,
 				07A5495A1E7C6AA700A6C4A1 /* KBANSManagedObjectContextImportExtensionsTextCase.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

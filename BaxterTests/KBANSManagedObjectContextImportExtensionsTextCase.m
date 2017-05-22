@@ -18,26 +18,36 @@
 #import <Baxter/Baxter.h>
 
 @interface KBANSManagedObjectContextImportExtensionsTextCase : XCTestCase
-@property (strong,nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
-@property (strong,nonatomic) NSManagedObjectContext *context;
+
 @end
 
 @implementation KBANSManagedObjectContextImportExtensionsTextCase
 
-- (void)setUp {
-    [super setUp];
+- (void)testClassProperties {
+    [NSManagedObjectContext setKBA_defaultIdentityKey:@"id"];
     
-    [self setPersistentStoreCoordinator:[[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[[NSManagedObjectModel alloc] initWithContentsOfURL:[[NSBundle bundleForClass:self.class] URLForResource:@"Test" withExtension:@"mom"]]]];
-    [self.persistentStoreCoordinator addPersistentStoreWithType:NSInMemoryStoreType configuration:nil URL:nil options:nil error:NULL];
+    XCTAssertEqualObjects(NSManagedObjectContext.KBA_defaultIdentityKey, @"id");
     
-    [self setContext:[[NSManagedObjectContext alloc] initWithConcurrencyType:NSMainQueueConcurrencyType]];
-    [self.context setPersistentStoreCoordinator:self.persistentStoreCoordinator];
-    [self.context setUndoManager:nil];
+    [NSManagedObjectContext setKBA_defaultIdentityKey:nil];
+    
+    XCTAssertEqualObjects(NSManagedObjectContext.KBA_defaultIdentityKey, @"identity");
+    
+    [NSManagedObjectContext setKBA_defaultDateFormatter:nil];
+    
+    XCTAssertNotNil(NSManagedObjectContext.KBA_defaultDateFormatter);
+}
+- (void)testCoreDataImport {
+    NSPersistentStoreCoordinator *coordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[[NSManagedObjectModel alloc] initWithContentsOfURL:[[NSBundle bundleForClass:self.class] URLForResource:@"Test" withExtension:@"mom"]]];
+    
+    [coordinator addPersistentStoreWithType:NSInMemoryStoreType configuration:nil URL:nil options:nil error:NULL];
+    
+    NSManagedObjectContext *context = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSMainQueueConcurrencyType];
+    
+    [context setPersistentStoreCoordinator:coordinator];
+    [context setUndoManager:nil];
     
     [NSManagedObjectContext setKBA_defaultIdentityKey:@"id"];
-}
-
-- (void)testCoreDataImport {
+    
     NSString *const kID = @"4E44DCEB-695D-4CA1-B672-5383230C4EC5";
     NSString *const kName = @"Project Name";
     NSNumber *const kNumberOfIssues = @1234;
@@ -59,8 +69,8 @@
     
     XCTestExpectation *expect = [self expectationWithDescription:@"Testing core data import"];
     
-    [self.context KBA_importJSON:kDict entityOrder:nil entityMapping:nil completion:^(BOOL success, NSError *error) {
-        NSManagedObject *project = [self.context KBA_fetchEntityNamed:@"Project" predicate:[NSPredicate predicateWithFormat:@"%K == %@",@"id",kID] sortDescriptors:nil limit:1 error:NULL].firstObject;
+    [context KBA_importJSON:kDict entityOrder:nil entityMapping:nil completion:^(BOOL success, NSError *error) {
+        NSManagedObject *project = [context KBA_fetchEntityNamed:@"Project" predicate:[NSPredicate predicateWithFormat:@"%K == %@",@"id",kID] sortDescriptors:nil limit:1 error:NULL].firstObject;
         
         XCTAssertEqualObjects([project valueForKey:@"id"], kID);
         XCTAssertEqualObjects([project valueForKey:@"name"], kName);

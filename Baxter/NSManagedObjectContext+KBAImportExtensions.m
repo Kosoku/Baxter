@@ -23,39 +23,37 @@
 
 #import <objc/runtime.h>
 
+static void *kKBA_defaultIdentityKey = &kKBA_defaultIdentityKey;
+static void *kKBA_defaultDateFormatterKey = &kKBA_defaultDateFormatterKey;
+
 @interface NSManagedObjectContext (KBACoreDataImportExtensionsPrivate)
++ (NSString *)_KBA_defaultIdentity;
++ (NSDateFormatter *)_KBA_defaultDateFormatter;
 + (NSMutableDictionary *)_KBA_propertyMappingDictionary;
 @end
 
 @implementation NSManagedObjectContext (KBAImportExtensions)
 
-static void *kKBA_defaultIdentityKey = &kKBA_defaultIdentityKey;
++ (void)load {
+    [self setKBA_defaultIdentityKey:[self _KBA_defaultIdentity]];
+    [self setKBA_defaultDateFormatter:[self _KBA_defaultDateFormatter]];
+}
+
 + (NSString *)KBA_defaultIdentityKey; {
     return objc_getAssociatedObject(self, kKBA_defaultIdentityKey);
 }
-+ (void)KBA_setDefaultIdentityKey:(NSString *)key; {
++ (void)setKBA_defaultIdentityKey:(NSString *)key; {
+    key = key.length > 0 ? key : [self _KBA_defaultIdentity];
+    
     objc_setAssociatedObject(self, kKBA_defaultIdentityKey, key, OBJC_ASSOCIATION_COPY_NONATOMIC);
 }
 
-static void *kKBA_defaultDateFormatterKey = &kKBA_defaultDateFormatterKey;
 + (NSDateFormatter *)KBA_defaultDateFormatter; {
-    NSDateFormatter *retval = objc_getAssociatedObject(self, kKBA_defaultDateFormatterKey);
-    
-    if (!retval) {
-        static NSDateFormatter *kRetval;
-        static dispatch_once_t onceToken;
-        dispatch_once(&onceToken, ^{
-            kRetval = [[NSDateFormatter alloc] init];
-            
-            [kRetval setDateFormat:@"yyyy-MM-dd'T'HH:mm:ssZZZZZ"];
-        });
-        
-        retval = kRetval;
-    }
-    
-    return retval;
+    return objc_getAssociatedObject(self, kKBA_defaultDateFormatterKey);
 }
-+ (void)KBA_setDefaultDateFormatter:(NSDateFormatter *)dateFormatter; {
++ (void)setKBA_defaultDateFormatter:(NSDateFormatter *)dateFormatter; {
+    dateFormatter = dateFormatter ?: [self _KBA_defaultDateFormatter];
+    
     objc_setAssociatedObject(self, kKBA_defaultDateFormatterKey, dateFormatter, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
@@ -179,6 +177,17 @@ static void *kKBA_defaultDateFormatterKey = &kKBA_defaultDateFormatterKey;
 @end
 
 @implementation NSManagedObjectContext (KBAImportExtensionsPrivate)
+
++ (NSString *)_KBA_defaultIdentity; {
+    return @"identity";
+}
++ (NSDateFormatter *)_KBA_defaultDateFormatter; {
+    NSDateFormatter *retval = [[NSDateFormatter alloc] init];
+    
+    [retval setDateFormat:@"yyyy-MM-dd'T'HH:mm:ssZZZZZ"];
+    
+    return retval;
+}
 
 static void *kKBA_registerPropertyMappingForEntityNamed = &kKBA_registerPropertyMappingForEntityNamed;
 + (NSMutableDictionary *)_KBA_propertyMappingDictionary; {

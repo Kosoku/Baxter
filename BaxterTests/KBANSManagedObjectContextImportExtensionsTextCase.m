@@ -34,7 +34,7 @@
     [self.context setPersistentStoreCoordinator:self.persistentStoreCoordinator];
     [self.context setUndoManager:nil];
     
-    [NSManagedObjectContext KBA_setDefaultIdentityKey:@"id"];
+    [NSManagedObjectContext setKBA_defaultIdentityKey:@"id"];
 }
 
 - (void)testCoreDataImport {

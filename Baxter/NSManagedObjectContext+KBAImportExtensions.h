@@ -23,32 +23,17 @@ NS_ASSUME_NONNULL_BEGIN
 @interface NSManagedObjectContext (KBAImportExtensions)
 
 /**
- Get the key used for testing equality.
+ Set and get the key used for testing equality when importing. If you require a custom key, this should be set before calling `KBA_importJSON:entityOrder:entityMapping:completion:`.
  
- @return The identity key
+ The default is @"identity".
  */
-+ (nullable NSString *)KBA_defaultIdentityKey;
+@property (class,copy,nonatomic,null_resettable) NSString *KBA_defaultIdentityKey;
 /**
- Set the key used for testing equality. This should be set before calling `KBA_importJSON:entityOrder:entityMapping:completion:`.
+ Set and get the date formatter used to convert between JSON and NSDate objects.
  
- @param key The identity key
+ The default is an NSDateFormatter with @"yyyy-MM-dd'T'HH:mm:ssZZZZZ" as its date format.
  */
-+ (void)KBA_setDefaultIdentityKey:(nullable NSString *)key;
-
-/**
- Get the date formatter used to convert between JSON and NSDate objects.
- 
- The default is a NSDateFormatter with @"yyyy-MM-dd'T'HH:mm:ssZZZZZ" as its date format.
- 
- @return The date formatter
- */
-+ (NSDateFormatter *)KBA_defaultDateFormatter;
-/**
- Set the date formatter used to convert between JSON and NSDate objects.
- 
- @param dateFormatter The date formatter
- */
-+ (void)KBA_setDefaultDateFormatter:(nullable NSDateFormatter *)dateFormatter;
+@property (class,strong,nonatomic,null_resettable) NSDateFormatter *KBA_defaultDateFormatter;
 
 /**
  Get the object responsible for mapping between entity properties and JSON keys.

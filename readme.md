@@ -18,3 +18,7 @@ You can install *Baxter* using [cocoapods](https://cocoapods.org/), [Carthage](h
 Third party:
 
 - [Stanley](https://github.com/Kosoku/Stanley)
+
+Apple:
+
+- `CoreData`

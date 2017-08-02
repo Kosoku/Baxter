@@ -67,13 +67,13 @@
     return [self executeFetchRequest:request error:error];
 }
 
-- (void)KBA_fetchEntityNamed:(NSString *)entityName predicate:(NSPredicate *)predicate sortDescriptors:(NSArray *)sortDescriptors completion:(void(^)(NSArray *objects, NSError *error))completion; {
+- (void)KBA_fetchEntityNamed:(NSString *)entityName predicate:(NSPredicate *)predicate sortDescriptors:(NSArray *)sortDescriptors completion:(void(^)(NSArray<__kindof NSManagedObject *> *objects, NSError *error))completion; {
     [self KBA_fetchEntityNamed:entityName predicate:predicate sortDescriptors:sortDescriptors limit:0 offset:0 completion:completion];
 }
-- (void)KBA_fetchEntityNamed:(NSString *)entityName predicate:(NSPredicate *)predicate sortDescriptors:(NSArray *)sortDescriptors limit:(NSUInteger)limit completion:(void(^)(NSArray *objects, NSError *error))completion; {
+- (void)KBA_fetchEntityNamed:(NSString *)entityName predicate:(NSPredicate *)predicate sortDescriptors:(NSArray *)sortDescriptors limit:(NSUInteger)limit completion:(void(^)(NSArray<__kindof NSManagedObject *> *objects, NSError *error))completion; {
     [self KBA_fetchEntityNamed:entityName predicate:predicate sortDescriptors:sortDescriptors limit:limit offset:0 completion:completion];
 }
-- (void)KBA_fetchEntityNamed:(NSString *)entityName predicate:(NSPredicate *)predicate sortDescriptors:(NSArray *)sortDescriptors limit:(NSUInteger)limit offset:(NSUInteger)offset completion:(void(^)(NSArray *objects, NSError *error))completion; {
+- (void)KBA_fetchEntityNamed:(NSString *)entityName predicate:(NSPredicate *)predicate sortDescriptors:(NSArray *)sortDescriptors limit:(NSUInteger)limit offset:(NSUInteger)offset completion:(void(^)(NSArray<__kindof NSManagedObject *> *objects, NSError *error))completion; {
     NSParameterAssert(completion);
     
     NSManagedObjectContext *context = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSPrivateQueueConcurrencyType];

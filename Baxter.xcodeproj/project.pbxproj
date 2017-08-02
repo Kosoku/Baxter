@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		074531501E9EA5E600CEF9E0 /* Stanley.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0745314F1E9EA5E600CEF9E0 /* Stanley.framework */; };
+		0795E2A01F326C2900DC0171 /* Stanley.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0795E29F1F326C2900DC0171 /* Stanley.framework */; };
 		07A548C61E7C599600A6C4A1 /* Baxter.h in Headers */ = {isa = PBXBuildFile; fileRef = 07A548C41E7C599600A6C4A1 /* Baxter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		07A548CF1E7C5AD000A6C4A1 /* NSFetchRequest+KBAExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 07A548CD1E7C5AD000A6C4A1 /* NSFetchRequest+KBAExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		07A548D01E7C5AD000A6C4A1 /* NSFetchRequest+KBAExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A548CE1E7C5AD000A6C4A1 /* NSFetchRequest+KBAExtensions.m */; };
@@ -25,7 +26,6 @@
 		07A548F61E7C613800A6C4A1 /* KBADefaultManagedObjectPropertyMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A548F41E7C613800A6C4A1 /* KBADefaultManagedObjectPropertyMapping.m */; };
 		07A548F91E7C622200A6C4A1 /* NSManagedObjectContext+KBAImportExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 07A548F71E7C622200A6C4A1 /* NSManagedObjectContext+KBAImportExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		07A548FA1E7C622200A6C4A1 /* NSManagedObjectContext+KBAImportExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A548F81E7C622200A6C4A1 /* NSManagedObjectContext+KBAImportExtensions.m */; };
-		07A548FC1E7C647F00A6C4A1 /* Stanley.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07A548FB1E7C647F00A6C4A1 /* Stanley.framework */; };
 		07A548FF1E7C658C00A6C4A1 /* Test.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 07A548FE1E7C658C00A6C4A1 /* Test.xcdatamodel */; };
 		07A5490F1E7C684B00A6C4A1 /* Baxter.h in Headers */ = {isa = PBXBuildFile; fileRef = 07A548C41E7C599600A6C4A1 /* Baxter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		07A549101E7C684B00A6C4A1 /* NSFetchRequest+KBAExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 07A548CD1E7C5AD000A6C4A1 /* NSFetchRequest+KBAExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -109,6 +109,7 @@
 
 /* Begin PBXFileReference section */
 		0745314F1E9EA5E600CEF9E0 /* Stanley.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Stanley.framework; path = "Vendor/Stanley/build/Debug-watchos/Stanley.framework"; sourceTree = "<group>"; };
+		0795E29F1F326C2900DC0171 /* Stanley.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Stanley.framework; path = "../../Library/Developer/Xcode/DerivedData/Baxter-evreckdgsbnsgedxypslwdrqivls/Build/Products/Debug-iphonesimulator/Stanley.framework"; sourceTree = "<group>"; };
 		07A548C11E7C599600A6C4A1 /* Baxter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Baxter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		07A548C41E7C599600A6C4A1 /* Baxter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Baxter.h; sourceTree = "<group>"; };
 		07A548C51E7C599600A6C4A1 /* Baxter-iOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Baxter-iOS-Info.plist"; sourceTree = "<group>"; };
@@ -156,7 +157,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				07A548FC1E7C647F00A6C4A1 /* Stanley.framework in Frameworks */,
+				0795E2A01F326C2900DC0171 /* Stanley.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,6 +286,7 @@
 		07A548E01E7C5CB800A6C4A1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0795E29F1F326C2900DC0171 /* Stanley.framework */,
 				0745314F1E9EA5E600CEF9E0 /* Stanley.framework */,
 				07A549651E7C6B4000A6C4A1 /* CoreData.framework */,
 				07A549631E7C6B3C00A6C4A1 /* Stanley.framework */,
@@ -795,10 +797,6 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Vendor/Stanley/build/Debug-iphoneos",
-				);
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -864,10 +862,6 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Vendor/Stanley/build/Debug-iphoneos",
-				);
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;

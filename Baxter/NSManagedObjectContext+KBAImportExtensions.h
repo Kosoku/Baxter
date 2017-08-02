@@ -61,7 +61,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param error If the method returns nil, an error describing the reason for failure
  @return The managed object
  */
-- (nullable NSManagedObject *)KBA_managedObjectWithDictionary:(NSDictionary *)dictionary entityName:(NSString *)entityName propertyMapping:(id<KBAManagedObjectPropertyMapping>)propertyMapping error:(NSError *__autoreleasing *)error;
+- (nullable __kindof NSManagedObject *)KBA_managedObjectWithDictionary:(NSDictionary *)dictionary entityName:(NSString *)entityName propertyMapping:(id<KBAManagedObjectPropertyMapping>)propertyMapping error:(NSError *__autoreleasing *)error;
 
 /**
  Imports the provided JSON, creating managed objects for each entry using entityMapping, which maps between JSON keys and entity names. Invokes the completion block when the operation is finished.

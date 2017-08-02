@@ -23,7 +23,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param objects The managed objects
  @param error If the fetch could not be completed, an error containing more information
  */
-typedef void(^KBACoreDataCompletionBlock)(NSArray *objects, NSError *_Nullable error);
+typedef void(^KBACoreDataCompletionBlock)(NSArray<__kindof NSManagedObject *> *objects, NSError *_Nullable error);
 
 @interface NSManagedObjectContext (KBAExtensions)
 
@@ -47,7 +47,7 @@ typedef void(^KBACoreDataCompletionBlock)(NSArray *objects, NSError *_Nullable e
  @return The resulting set of NSManagedObject instances
  @exception NSException Thrown if _entityName_ is nil
  */
-- (nullable NSArray *)KBA_fetchEntityNamed:(NSString *)entityName predicate:(nullable NSPredicate *)predicate sortDescriptors:(nullable NSArray<NSSortDescriptor *> *)sortDescriptors error:(NSError *__autoreleasing *)error;
+- (nullable NSArray<__kindof NSManagedObject *> *)KBA_fetchEntityNamed:(NSString *)entityName predicate:(nullable NSPredicate *)predicate sortDescriptors:(nullable NSArray<NSSortDescriptor *> *)sortDescriptors error:(NSError *__autoreleasing *)error;
 /**
  Calls KBA_fetchEntityNamed:predicate:sortDescriptors:limit:offset:error:, passing _entityName_, _predicate_, _sortDescriptors_, _limit_, and _error_ respectively.
  
@@ -59,7 +59,7 @@ typedef void(^KBACoreDataCompletionBlock)(NSArray *objects, NSError *_Nullable e
  @return The resulting set of NSManagedObject instances
  @exception NSException Thrown if _entityName_ is nil
  */
-- (nullable NSArray *)KBA_fetchEntityNamed:(NSString *)entityName predicate:(nullable NSPredicate *)predicate sortDescriptors:(nullable NSArray<NSSortDescriptor *> *)sortDescriptors limit:(NSUInteger)limit error:(NSError *__autoreleasing *)error;
+- (nullable NSArray<__kindof NSManagedObject *> *)KBA_fetchEntityNamed:(NSString *)entityName predicate:(nullable NSPredicate *)predicate sortDescriptors:(nullable NSArray<NSSortDescriptor *> *)sortDescriptors limit:(NSUInteger)limit error:(NSError *__autoreleasing *)error;
 /**
  Constructs and executes a NSFetchRequest using _entityName_, _predicate_, _sortDescriptors_, _limit_, _offset_, and _error_.
  
@@ -72,7 +72,7 @@ typedef void(^KBACoreDataCompletionBlock)(NSArray *objects, NSError *_Nullable e
  @return The resulting set of NSManagedObject instances
  @exception NSException Thrown if _entityName_ is nil
  */
-- (nullable NSArray *)KBA_fetchEntityNamed:(NSString *)entityName predicate:(nullable NSPredicate *)predicate sortDescriptors:(nullable NSArray<NSSortDescriptor *> *)sortDescriptors limit:(NSUInteger)limit offset:(NSUInteger)offset error:(NSError *__autoreleasing *)error;
+- (nullable NSArray<__kindof NSManagedObject *> *)KBA_fetchEntityNamed:(NSString *)entityName predicate:(nullable NSPredicate *)predicate sortDescriptors:(nullable NSArray<NSSortDescriptor *> *)sortDescriptors limit:(NSUInteger)limit offset:(NSUInteger)offset error:(NSError *__autoreleasing *)error;
 
 /**
  Calls `KBA_fetchEntityNamed:predicate:sortDescriptors:limit:offset:completion:`, passing `entityName`, `predicate`, `sortDescriptors`, 0, 0, and `completion` respectively.

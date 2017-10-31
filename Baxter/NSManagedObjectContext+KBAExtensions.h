@@ -134,7 +134,7 @@ typedef void(^KBACoreDataCompletionBlock)(NSArray<__kindof NSManagedObject *> *o
  @return The resulting set of NSManagedObject instances
  @exception NSException Thrown if _entityName_ or _properties_ are nil
  */
-- (NSArray *)KBA_fetchPropertiesForEntityNamed:(NSString *)entityName properties:(NSArray<NSString *> *)properties predicate:(nullable NSPredicate *)predicate sortDescriptors:(nullable NSArray<NSSortDescriptor *> *)sortDescriptors error:(NSError *__autoreleasing *)error;
+- (NSArray *)KBA_fetchPropertiesForEntityNamed:(NSString *)entityName properties:(NSArray *)properties predicate:(nullable NSPredicate *)predicate sortDescriptors:(nullable NSArray<NSSortDescriptor *> *)sortDescriptors error:(NSError *__autoreleasing *)error;
 
 @end
 

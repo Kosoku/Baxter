@@ -155,4 +155,13 @@
     return [self executeFetchRequest:request error:error];
 }
 
+- (NSArray *)KBA_fetchWithOptions:(NSDictionary<KBANSFetchRequestOptionsKey,id> *)options {
+    return [self KBA_fetchWithOptions:options error:NULL];
+}
+- (NSArray *)KBA_fetchWithOptions:(NSDictionary<KBANSFetchRequestOptionsKey,id> *)options error:(NSError * _Nullable __autoreleasing *)error {
+    NSFetchRequest *request = [NSFetchRequest KBA_fetchRequestWithOptions:options];
+    
+    return [self executeFetchRequest:request error:error];
+}
+
 @end

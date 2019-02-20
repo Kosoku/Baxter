@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'Baxter'
-  s.version          = '1.2.3'
+  s.version          = '1.3.0'
   s.summary          = 'Baxter is a iOS/macOS/tvOS/watchOS framework that extends the CoreData framework.'
 
 # This description is used to generate tags and improve search results.
@@ -37,13 +37,15 @@ Baxter is a iOS/macOS/tvOS/watchOS framework that extends the `CoreData` framewo
 
   s.source_files = 'Baxter/**/*.{h,m}'
   s.exclude_files = 'Baxter/Baxter-Info.h'
+  s.osx.exclude_files = 'Baxter/KBAFetchedResultsObserver.{h,m}'
+  s.tvos.exclude_files = 'Baxter/KBAFetchedResultsObserver.{h,m}'
+  s.watchos.exclude_files = 'Baxter/KBAFetchedResultsObserver.{h,m}'
   s.private_header_files = 'Baxter/Private/*.h'
   
-  # s.resource_bundles = {
-  #   '${POD_NAME}' => ['${POD_NAME}/Assets/*.png']
-  # }
+  s.ios.frameworks = 'Foundation', 'CoreData', 'UIKit'
+  s.osx.frameworks = 'Foundation', 'CoreData'
+  s.tvos.frameworks = 'Foundation', 'CoreData'
+  s.watchos.frameworks = 'Foundation', 'CoreData'
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  s.frameworks = 'Foundation', 'CoreData'
   s.dependency 'Stanley'
 end

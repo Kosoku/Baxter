@@ -32,6 +32,6 @@ FOUNDATION_EXPORT const unsigned char BaxterVersionString[];
 
 #import <Baxter/NSManagedObjectContext+KBAImportExtensions.h>
 
-#if TARGET_OS_IPHONE
+#if TARGET_OS_IOS
 #import <Baxter/KBAFetchedResultsObserver.h>
 #endif

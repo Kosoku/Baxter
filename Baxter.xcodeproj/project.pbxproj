@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		072C4147221D972F0091A6D0 /* KBAFetchedResultsObserver.h in Headers */ = {isa = PBXBuildFile; fileRef = 072C4145221D972F0091A6D0 /* KBAFetchedResultsObserver.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		072C4148221D972F0091A6D0 /* KBAFetchedResultsObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 072C4146221D972F0091A6D0 /* KBAFetchedResultsObserver.m */; };
 		074531501E9EA5E600CEF9E0 /* Stanley.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0745314F1E9EA5E600CEF9E0 /* Stanley.framework */; };
 		0795E2A01F326C2900DC0171 /* Stanley.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0795E29F1F326C2900DC0171 /* Stanley.framework */; };
 		07A548C61E7C599600A6C4A1 /* Baxter.h in Headers */ = {isa = PBXBuildFile; fileRef = 07A548C41E7C599600A6C4A1 /* Baxter.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -108,6 +110,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		072C4145221D972F0091A6D0 /* KBAFetchedResultsObserver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KBAFetchedResultsObserver.h; sourceTree = "<group>"; };
+		072C4146221D972F0091A6D0 /* KBAFetchedResultsObserver.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KBAFetchedResultsObserver.m; sourceTree = "<group>"; };
 		0745314F1E9EA5E600CEF9E0 /* Stanley.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Stanley.framework; path = "Vendor/Stanley/build/Debug-watchos/Stanley.framework"; sourceTree = "<group>"; };
 		0795E29F1F326C2900DC0171 /* Stanley.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Stanley.framework; path = "../../Library/Developer/Xcode/DerivedData/Baxter-evreckdgsbnsgedxypslwdrqivls/Build/Products/Debug-iphonesimulator/Stanley.framework"; sourceTree = "<group>"; };
 		07A548C11E7C599600A6C4A1 /* Baxter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Baxter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -218,6 +222,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		072C4144221D97000091A6D0 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				072C4145221D972F0091A6D0 /* KBAFetchedResultsObserver.h */,
+				072C4146221D972F0091A6D0 /* KBAFetchedResultsObserver.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
 		07A548B51E7C577F00A6C4A1 = {
 			isa = PBXGroup;
 			children = (
@@ -268,6 +281,7 @@
 			isa = PBXGroup;
 			children = (
 				07A548E91E7C5F6E00A6C4A1 /* Categories */,
+				072C4144221D97000091A6D0 /* Classes */,
 				07A548EA1E7C5F7600A6C4A1 /* Import */,
 			);
 			name = Source;
@@ -356,6 +370,7 @@
 				07A548F91E7C622200A6C4A1 /* NSManagedObjectContext+KBAImportExtensions.h in Headers */,
 				07A548F11E7C60BC00A6C4A1 /* KBADefaultManagedObjectEntityMapping.h in Headers */,
 				07A548EC1E7C5FE700A6C4A1 /* KBAManagedObjectEntityMapping.h in Headers */,
+				072C4147221D972F0091A6D0 /* KBAFetchedResultsObserver.h in Headers */,
 				07A548C61E7C599600A6C4A1 /* Baxter.h in Headers */,
 				07A548F51E7C613800A6C4A1 /* KBADefaultManagedObjectPropertyMapping.h in Headers */,
 				07A548E51E7C5CCF00A6C4A1 /* NSManagedObjectContext+KBAExtensions.h in Headers */,
@@ -724,6 +739,7 @@
 				07A548FA1E7C622200A6C4A1 /* NSManagedObjectContext+KBAImportExtensions.m in Sources */,
 				07A548E61E7C5CCF00A6C4A1 /* NSManagedObjectContext+KBAExtensions.m in Sources */,
 				07A548F21E7C60BC00A6C4A1 /* KBADefaultManagedObjectEntityMapping.m in Sources */,
+				072C4148221D972F0091A6D0 /* KBAFetchedResultsObserver.m in Sources */,
 				07A548D01E7C5AD000A6C4A1 /* NSFetchRequest+KBAExtensions.m in Sources */,
 				07A548F61E7C613800A6C4A1 /* KBADefaultManagedObjectPropertyMapping.m in Sources */,
 			);

@@ -18,17 +18,78 @@
 //  limitations under the License.
 
 #import "ViewController.h"
+#import "Row.h"
+
+#import <Baxter/Baxter.h>
+#import <Stanley/Stanley.h>
 
 @interface ViewController ()
+@property (strong,nonatomic) KBAFetchedResultsObserver *fetchedResultsObserver;
 
+@property (strong,nonatomic) NSPersistentContainer *persistentContainer;
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    self.title = @"Baxter";
+    self.view.backgroundColor = UIColor.whiteColor;
+    
+    UIBarButtonItem *addItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(_addItemAction:)];
+    
+    self.navigationItem.rightBarButtonItems = @[addItem, self.editButtonItem];
+    
+    self.persistentContainer = [[NSPersistentContainer alloc] initWithName:@"Model"];
+    
+    NSPersistentStoreDescription *desc = [[NSPersistentStoreDescription alloc] initWithURL:[NSFileManager.defaultManager.KST_applicationSupportDirectoryURL URLByAppendingPathComponent:@"Model.sqlite"]];
+    
+    desc.type = NSInMemoryStoreType;
+    desc.shouldAddStoreAsynchronously = NO;
+    desc.shouldMigrateStoreAutomatically = YES;
+    desc.shouldInferMappingModelAutomatically = YES;
+    
+    self.persistentContainer.persistentStoreDescriptions = @[desc];
+    [self.persistentContainer loadPersistentStoresWithCompletionHandler:^(NSPersistentStoreDescription * _Nonnull psd, NSError * _Nullable error) {
+        KSTLog(@"%@ %@",psd,error);
+    }];
+    
+    self.tableView.estimatedRowHeight = 44.0;
+    
+    self.fetchedResultsObserver = [[KBAFetchedResultsObserver alloc] initWithFetchRequest:Row.fetchRequestForRowsSortedByCreatedAt context:self.persistentContainer.viewContext];
+    self.fetchedResultsObserver.tableView = self.tableView;
 }
 
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.fetchedResultsObserver.fetchedObjects.count;
+}
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *retval = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass(UITableViewCell.class)];
+    
+    if (retval == nil) {
+        retval = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:NSStringFromClass(UITableViewCell.class)];
+    }
+    
+    Row *entity = [self.fetchedResultsObserver objectAtIndexPath:indexPath];
+    
+    retval.textLabel.numberOfLines = 0;
+    retval.textLabel.text = entity.title;
+    retval.detailTextLabel.numberOfLines = 0;
+    retval.detailTextLabel.text = entity.summary;
+    
+    return retval;
+}
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        Row *entity = [self.fetchedResultsObserver objectAtIndexPath:indexPath];
+        
+        [entity.managedObjectContext deleteObject:entity];
+    }
+}
+
+- (IBAction)_addItemAction:(id)sender {
+    [Row insertInManagedObjectContext:self.persistentContainer.viewContext];
+}
 
 @end

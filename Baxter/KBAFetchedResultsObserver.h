@@ -90,6 +90,13 @@ NS_ASSUME_NONNULL_BEGIN
  @return The fetched object
  */
 - (ResultType)objectAtIndexPath:(NSIndexPath *)indexPath;
+/**
+ Returns the index path for the fetched object, or nil if no such index path exists.
+ 
+ @param object The fetched object
+ @return The corresponding index path or nil
+ */
+- (nullable NSIndexPath *)indexPathForObject:(ResultType)object;
 
 @end
 

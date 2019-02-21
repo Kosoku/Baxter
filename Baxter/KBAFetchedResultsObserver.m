@@ -150,6 +150,9 @@
 - (id<NSFetchRequestResult>)objectAtIndexPath:(NSIndexPath *)indexPath {
     return [self.fetchedResultsController objectAtIndexPath:indexPath];
 }
+- (NSIndexPath *)indexPathForObject:(id<NSFetchRequestResult>)object {
+    return [self.fetchedResultsController indexPathForObject:object];
+}
 #pragma mark Properties
 @dynamic predicate;
 - (NSPredicate *)predicate {

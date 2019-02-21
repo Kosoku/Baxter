@@ -18,6 +18,7 @@
 //  limitations under the License.
 
 #import "ViewController.h"
+#import "DetailViewController.h"
 #import "Row.h"
 
 #import <Baxter/Baxter.h>
@@ -73,6 +74,7 @@
     
     Row *entity = [self.fetchedResultsObserver objectAtIndexPath:indexPath];
     
+    retval.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     retval.textLabel.numberOfLines = 0;
     retval.textLabel.text = entity.title;
     retval.detailTextLabel.numberOfLines = 0;
@@ -86,6 +88,12 @@
         
         [entity.managedObjectContext deleteObject:entity];
     }
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    DetailViewController *viewController = [[DetailViewController alloc] initWithEntity:[self.fetchedResultsObserver objectAtIndexPath:indexPath]];
+    
+    [self.navigationController pushViewController:viewController animated:YES];
 }
 
 - (IBAction)_addItemAction:(id)sender {

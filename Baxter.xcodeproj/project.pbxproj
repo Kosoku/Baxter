@@ -20,6 +20,8 @@
 		0721824E221E5A4B00103781 /* Row.m in Sources */ = {isa = PBXBuildFile; fileRef = 07218249221E5A4A00103781 /* Row.m */; };
 		0721824F221E5A4B00103781 /* _Row.m in Sources */ = {isa = PBXBuildFile; fileRef = 0721824B221E5A4A00103781 /* _Row.m */; };
 		07218252221E5AEA00103781 /* LoremIpsum.m in Sources */ = {isa = PBXBuildFile; fileRef = 07218251221E5AEA00103781 /* LoremIpsum.m */; };
+		07218255221E61F300103781 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07218254221E61F300103781 /* DetailViewController.m */; };
+		07218258221E62CB00103781 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07218256221E62CB00103781 /* DetailViewController.xib */; };
 		072C4147221D972F0091A6D0 /* KBAFetchedResultsObserver.h in Headers */ = {isa = PBXBuildFile; fileRef = 072C4145221D972F0091A6D0 /* KBAFetchedResultsObserver.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		072C4148221D972F0091A6D0 /* KBAFetchedResultsObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 072C4146221D972F0091A6D0 /* KBAFetchedResultsObserver.m */; };
 		074531501E9EA5E600CEF9E0 /* Stanley.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0745314F1E9EA5E600CEF9E0 /* Stanley.framework */; };
@@ -161,6 +163,9 @@
 		0721824D221E5A4A00103781 /* Row.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Row.h; sourceTree = "<group>"; };
 		07218250221E5AEA00103781 /* LoremIpsum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoremIpsum.h; path = Vendor/LoremIpsum/LoremIpsum/LoremIpsum.h; sourceTree = SOURCE_ROOT; };
 		07218251221E5AEA00103781 /* LoremIpsum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoremIpsum.m; path = Vendor/LoremIpsum/LoremIpsum/LoremIpsum.m; sourceTree = SOURCE_ROOT; };
+		07218253221E61F300103781 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		07218254221E61F300103781 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		07218257221E62CB00103781 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/DetailViewController.xib; sourceTree = "<group>"; };
 		072C4145221D972F0091A6D0 /* KBAFetchedResultsObserver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KBAFetchedResultsObserver.h; sourceTree = "<group>"; };
 		072C4146221D972F0091A6D0 /* KBAFetchedResultsObserver.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KBAFetchedResultsObserver.m; sourceTree = "<group>"; };
 		0745314F1E9EA5E600CEF9E0 /* Stanley.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Stanley.framework; path = "Vendor/Stanley/build/Debug-watchos/Stanley.framework"; sourceTree = "<group>"; };
@@ -289,6 +294,9 @@
 				0721822A221E577500103781 /* AppDelegate.m */,
 				0721822C221E577500103781 /* ViewController.h */,
 				0721822D221E577600103781 /* ViewController.m */,
+				07218253221E61F300103781 /* DetailViewController.h */,
+				07218254221E61F300103781 /* DetailViewController.m */,
+				07218256221E62CB00103781 /* DetailViewController.xib */,
 				07218232221E577700103781 /* Assets.xcassets */,
 				07218234221E577700103781 /* LaunchScreen.storyboard */,
 				07218237221E577700103781 /* Info.plist */,
@@ -754,6 +762,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				07218236221E577700103781 /* LaunchScreen.storyboard in Resources */,
+				07218258221E62CB00103781 /* DetailViewController.xib in Resources */,
 				07218233221E577700103781 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -894,6 +903,7 @@
 				0721822E221E577600103781 /* ViewController.m in Sources */,
 				0721824E221E5A4B00103781 /* Row.m in Sources */,
 				0721824F221E5A4B00103781 /* _Row.m in Sources */,
+				07218255221E61F300103781 /* DetailViewController.m in Sources */,
 				07218239221E577700103781 /* main.m in Sources */,
 				07218252221E5AEA00103781 /* LoremIpsum.m in Sources */,
 				0721822B221E577500103781 /* AppDelegate.m in Sources */,
@@ -1012,6 +1022,14 @@
 				07218235221E577700103781 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		07218256221E62CB00103781 /* DetailViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				07218257221E62CB00103781 /* Base */,
+			);
+			name = DetailViewController.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

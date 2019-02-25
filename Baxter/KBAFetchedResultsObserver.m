@@ -73,7 +73,9 @@
                         [self.tableView deleteRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationAutomatic];
                         break;
                     case NSFetchedResultsChangeMove:
-                        [self.tableView moveRowAtIndexPath:indexPaths.firstObject toIndexPath:indexPaths.lastObject];
+                        if (![indexPaths.firstObject isEqual:indexPaths.lastObject]) {
+                            [self.tableView moveRowAtIndexPath:indexPaths.firstObject toIndexPath:indexPaths.lastObject];
+                        }
                         break;
                     default:
                         break;
@@ -108,7 +110,9 @@
                         [self.collectionView deleteItemsAtIndexPaths:indexPaths];
                         break;
                     case NSFetchedResultsChangeMove:
-                        [self.collectionView moveItemAtIndexPath:indexPaths.firstObject toIndexPath:indexPaths.lastObject];
+                        if (![indexPaths.firstObject isEqual:indexPaths.lastObject]) {
+                            [self.collectionView moveItemAtIndexPath:indexPaths.firstObject toIndexPath:indexPaths.lastObject];
+                        }
                         break;
                     default:
                         break;

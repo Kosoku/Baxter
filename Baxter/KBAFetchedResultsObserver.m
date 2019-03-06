@@ -21,10 +21,43 @@
 
 #import <Stanley/Stanley.h>
 
+@interface KBAFetchedResultsObserverChangeImpl : NSObject <KBAFetchedResultsObserverChange>
+@property (strong,nonatomic) __kindof NSManagedObject *changeObject;
+@property (assign,nonatomic) NSFetchedResultsChangeType changeType;
+@property (strong,nonatomic) NSIndexPath *changeIndexPath;
+@property (strong,nonatomic) NSIndexPath *changeNewIndexPath;
+
+- (instancetype)initWithObject:(__kindof NSManagedObject *)object type:(NSFetchedResultsChangeType)type indexPath:(NSIndexPath *)indexPath newIndexPath:(NSIndexPath *)newIndexPath NS_DESIGNATED_INITIALIZER;
+
+- (instancetype)init NS_UNAVAILABLE;
++ (instancetype)new NS_UNAVAILABLE;
+@end
+
+@implementation KBAFetchedResultsObserverChangeImpl
+
+- (NSString *)description {
+    return [NSString stringWithFormat:@"<%@: %p> object=%@ type=%@ indexPath=%@ newIndexPath=%@", NSStringFromClass(self.class), self, self.changeObject, @(self.changeType), self.changeIndexPath, self.changeNewIndexPath];
+}
+
+- (instancetype)initWithObject:(__kindof NSManagedObject *)object type:(NSFetchedResultsChangeType)type indexPath:(NSIndexPath *)indexPath newIndexPath:(NSIndexPath *)newIndexPath {
+    if (!(self = [super init]))
+        return nil;
+    
+    _changeObject = object;
+    _changeType = type;
+    _changeIndexPath = indexPath;
+    _changeNewIndexPath = newIndexPath;
+    
+    return self;
+}
+
+@end
+
 @interface KBAFetchedResultsObserver () <NSFetchedResultsControllerDelegate>
 @property (strong,nonatomic) NSFetchedResultsController *fetchedResultsController;
 
 @property (strong,nonatomic) NSMutableArray<NSDictionary *> *itemChanges;
+@property (strong,nonatomic) NSMutableArray<KBAFetchedResultsObserverChangeImpl *> *changeImpls;
 
 - (void)_generateKVOForFetchedObjects;
 - (void)_reloadView;
@@ -35,8 +68,19 @@
 #pragma mark NSFetchedResultsControllerDelegate
 - (void)controllerWillChangeContent:(NSFetchedResultsController *)controller {
     self.itemChanges = [[NSMutableArray alloc] init];
+    
+    if ([self.delegate respondsToSelector:@selector(fetchedResultsObserverWillChange:)]) {
+        [self.delegate fetchedResultsObserverWillChange:self];
+    }
+    if ([self.delegate respondsToSelector:@selector(fetchedResultsObserver:didObserveChanges:)]) {
+        self.changeImpls = [[NSMutableArray alloc] init];
+    }
 }
 - (void)controller:(NSFetchedResultsController *)controller didChangeObject:(id)anObject atIndexPath:(NSIndexPath *)indexPath forChangeType:(NSFetchedResultsChangeType)type newIndexPath:(NSIndexPath *)newIndexPath {
+    if (self.changeImpls != nil) {
+        [self.changeImpls addObject:[[KBAFetchedResultsObserverChangeImpl alloc] initWithObject:anObject type:type indexPath:indexPath newIndexPath:newIndexPath]];
+    }
+    
     switch (type) {
         case NSFetchedResultsChangeMove:
             [self.itemChanges addObject:@{@(type): @[indexPath, newIndexPath]}];
@@ -55,69 +99,65 @@
     }
 }
 - (void)controllerDidChangeContent:(NSFetchedResultsController *)controller {
+    void(^block)(UIView *) = ^(UIView *view){
+#if TARGET_OS_IPHONE
+        UITableView *tableView = [view isKindOfClass:UITableView.class] ? (UITableView *)view : nil;
+        UICollectionView *collectionView = [view isKindOfClass:UICollectionView.class] ? (UICollectionView *)view : nil;
+#endif
+        
+        for (NSDictionary *change in self.itemChanges) {
+            NSFetchedResultsChangeType type = [change.allKeys.firstObject unsignedIntegerValue];
+            NSArray *indexPaths = change.allValues.firstObject;
+            
+            switch (type) {
+                case NSFetchedResultsChangeUpdate:
+#if TARGET_OS_IPHONE
+                    [tableView reloadRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationAutomatic];
+                    [collectionView reloadItemsAtIndexPaths:indexPaths];
+#endif
+                    break;
+                case NSFetchedResultsChangeInsert:
+#if TARGET_OS_IPHONE
+                    [tableView insertRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationAutomatic];
+                    [collectionView insertItemsAtIndexPaths:indexPaths];
+#endif
+                    break;
+                case NSFetchedResultsChangeDelete:
+#if TARGET_OS_IPHONE
+                    [tableView deleteRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationAutomatic];
+                    [collectionView deleteItemsAtIndexPaths:indexPaths];
+#endif
+                    break;
+                case NSFetchedResultsChangeMove:
+#if TARGET_OS_IPHONE
+                    if (![indexPaths.firstObject isEqual:indexPaths.lastObject]) {
+                        [tableView moveRowAtIndexPath:indexPaths.firstObject toIndexPath:indexPaths.lastObject];
+                        [collectionView moveItemAtIndexPath:indexPaths.firstObject toIndexPath:indexPaths.lastObject];
+                    }
+#endif
+                    break;
+                default:
+                    break;
+            }
+        }
+    };
 #if TARGET_OS_IPHONE
     if (self.tableView != nil) {
-        void(^block)(void) = ^{
-            for (NSDictionary *change in self.itemChanges) {
-                NSFetchedResultsChangeType type = [change.allKeys.firstObject unsignedIntegerValue];
-                NSArray *indexPaths = change.allValues.firstObject;
-                
-                switch (type) {
-                    case NSFetchedResultsChangeUpdate:
-                        [self.tableView reloadRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationAutomatic];
-                        break;
-                    case NSFetchedResultsChangeInsert:
-                        [self.tableView insertRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationAutomatic];
-                        break;
-                    case NSFetchedResultsChangeDelete:
-                        [self.tableView deleteRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationAutomatic];
-                        break;
-                    case NSFetchedResultsChangeMove:
-                        if (![indexPaths.firstObject isEqual:indexPaths.lastObject]) {
-                            [self.tableView moveRowAtIndexPath:indexPaths.firstObject toIndexPath:indexPaths.lastObject];
-                        }
-                        break;
-                    default:
-                        break;
-                }
-            }
-        };
-        
         if (@available(iOS 11.0, *)) {
-            [self.tableView performBatchUpdates:block completion:nil];
+            [self.tableView performBatchUpdates:^{
+                block(self.tableView);
+            } completion:nil];
         } else {
             [self.tableView beginUpdates];
             
-            block();
+            block(self.tableView);
             
             [self.tableView endUpdates];
         }
     }
     if (self.collectionView != nil) {
         [self.collectionView performBatchUpdates:^{
-            for (NSDictionary *change in self.itemChanges) {
-                NSFetchedResultsChangeType type = [change.allKeys.firstObject unsignedIntegerValue];
-                NSArray *indexPaths = change.allValues.firstObject;
-                
-                switch (type) {
-                    case NSFetchedResultsChangeUpdate:
-                        [self.collectionView reloadItemsAtIndexPaths:indexPaths];
-                        break;
-                    case NSFetchedResultsChangeInsert:
-                        [self.collectionView insertItemsAtIndexPaths:indexPaths];
-                        break;
-                    case NSFetchedResultsChangeDelete:
-                        [self.collectionView deleteItemsAtIndexPaths:indexPaths];
-                        break;
-                    case NSFetchedResultsChangeMove:
-                        if (![indexPaths.firstObject isEqual:indexPaths.lastObject]) {
-                            [self.collectionView moveItemAtIndexPath:indexPaths.firstObject toIndexPath:indexPaths.lastObject];
-                        }
-                        break;
-                    default:
-                        break;
-                }
-            }
+            block(self.collectionView);
         } completion:nil];
     }
 #else
@@ -128,7 +168,12 @@
     
     [self _generateKVOForFetchedObjects];
     
-    if ([self.delegate respondsToSelector:@selector(fetchedResultsObserverDidChange:)]) {
+    if ([self.delegate respondsToSelector:@selector(fetchedResultsObserver:didObserveChanges:)]) {
+        [self.delegate fetchedResultsObserver:self didObserveChanges:self.changeImpls];
+        
+        self.changeImpls = nil;
+    }
+    else if ([self.delegate respondsToSelector:@selector(fetchedResultsObserverDidChange:)]) {
         [self.delegate fetchedResultsObserverDidChange:self];
     }
 }

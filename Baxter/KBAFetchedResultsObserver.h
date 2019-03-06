@@ -100,14 +100,52 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
+/**
+ Protocol describing a change object.
+ */
+@protocol KBAFetchedResultsObserverChange <NSObject>
+@required
+/**
+ The managed object that was changed.
+ */
+@property (readonly,nonatomic) __kindof NSManagedObject *changeObject;
+/**
+ The type of change.
+ */
+@property (readonly,nonatomic) NSFetchedResultsChangeType changeType;
+/**
+ The index path of the changed object. Will be nil for deletes.
+ */
+@property (readonly,nonatomic,nullable) NSIndexPath *changeIndexPath;
+/**
+ The new index path for the changed object. Will be non-nil only for moves.
+ */
+@property (readonly,nonatomic,nullable) NSIndexPath *changeNewIndexPath;
+@end
+
 @protocol KBAFetchedResultsObserverDelegate <NSObject>
 @optional
+/**
+ Called before the fetched results observer updates its content. Corresponds to the `controllerWillChangeContent:` NSFetchedResultsControllerDelegate method.
+ 
+ @param observer The sender of the message
+ */
+- (void)fetchedResultsObserverWillChange:(KBAFetchedResultsObserver *)observer;
 /**
  Called after the fetched results observer updates its content. Corresponds to the `controllerDidChangeContent:` NSFetchedResultsControllerDelegate method.
  
  @param observer The sender of the message
  */
 - (void)fetchedResultsObserverDidChange:(KBAFetchedResultsObserver *)observer;
+/**
+ Called after the fetched results observer updates its content, provides a an array of objects conforming to KBAFetchedResultsObserverChange protocol that describe each individual change.
+ 
+ This method is preferred over fetchedResultsObserverDidChange: and will be called instead of fetchedResultsObserverDidChange: if the delegate implements both.
+ 
+ @param observer The sender of the message
+ @param changes The array of change objects
+ */
+- (void)fetchedResultsObserver:(KBAFetchedResultsObserver *)observer didObserveChanges:(NSArray<id<KBAFetchedResultsObserverChange>> *)changes;
 @end
 
 NS_ASSUME_NONNULL_END

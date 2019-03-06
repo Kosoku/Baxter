@@ -24,7 +24,7 @@
 #import <Baxter/Baxter.h>
 #import <Stanley/Stanley.h>
 
-@interface ViewController ()
+@interface ViewController () <KBAFetchedResultsObserverDelegate>
 @property (strong,nonatomic) KBAFetchedResultsObserver *fetchedResultsObserver;
 
 @property (strong,nonatomic) NSPersistentContainer *persistentContainer;
@@ -60,6 +60,7 @@
     
     self.fetchedResultsObserver = [[KBAFetchedResultsObserver alloc] initWithFetchRequest:Row.fetchRequestForRowsSortedByCreatedAt context:self.persistentContainer.viewContext];
     self.fetchedResultsObserver.tableView = self.tableView;
+    self.fetchedResultsObserver.delegate = self;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -94,6 +95,10 @@
     DetailViewController *viewController = [[DetailViewController alloc] initWithEntity:[self.fetchedResultsObserver objectAtIndexPath:indexPath]];
     
     [self.navigationController pushViewController:viewController animated:YES];
+}
+
+- (void)fetchedResultsObserver:(KBAFetchedResultsObserver *)observer didObserveChanges:(NSArray<id<KBAFetchedResultsObserverChange>> *)changes {
+    KSTLogObject(changes);
 }
 
 - (IBAction)_addItemAction:(id)sender {

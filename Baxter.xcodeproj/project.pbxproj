@@ -12,8 +12,6 @@
 		07218233221E577700103781 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07218232221E577700103781 /* Assets.xcassets */; };
 		07218236221E577700103781 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07218234221E577700103781 /* LaunchScreen.storyboard */; };
 		07218239221E577700103781 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 07218238221E577700103781 /* main.m */; };
-		0721823D221E57B800103781 /* Stanley.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0795E29F1F326C2900DC0171 /* Stanley.framework */; };
-		0721823E221E57B800103781 /* Stanley.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0795E29F1F326C2900DC0171 /* Stanley.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		07218240221E57C300103781 /* Baxter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07A548C11E7C599600A6C4A1 /* Baxter.framework */; };
 		07218241221E57C300103781 /* Baxter.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 07A548C11E7C599600A6C4A1 /* Baxter.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		07218246221E58FF00103781 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 07218244221E58FF00103781 /* Model.xcdatamodeld */; };
@@ -24,17 +22,13 @@
 		07218258221E62CB00103781 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07218256221E62CB00103781 /* DetailViewController.xib */; };
 		072C4147221D972F0091A6D0 /* KBAFetchedResultsObserver.h in Headers */ = {isa = PBXBuildFile; fileRef = 072C4145221D972F0091A6D0 /* KBAFetchedResultsObserver.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		072C4148221D972F0091A6D0 /* KBAFetchedResultsObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 072C4146221D972F0091A6D0 /* KBAFetchedResultsObserver.m */; };
-		074531501E9EA5E600CEF9E0 /* Stanley.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0745314F1E9EA5E600CEF9E0 /* Stanley.framework */; };
-		0795E2A01F326C2900DC0171 /* Stanley.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0795E29F1F326C2900DC0171 /* Stanley.framework */; };
 		07A548C61E7C599600A6C4A1 /* Baxter.h in Headers */ = {isa = PBXBuildFile; fileRef = 07A548C41E7C599600A6C4A1 /* Baxter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		07A548CF1E7C5AD000A6C4A1 /* NSFetchRequest+KBAExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 07A548CD1E7C5AD000A6C4A1 /* NSFetchRequest+KBAExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		07A548D01E7C5AD000A6C4A1 /* NSFetchRequest+KBAExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A548CE1E7C5AD000A6C4A1 /* NSFetchRequest+KBAExtensions.m */; };
 		07A548D81E7C5B7A00A6C4A1 /* KBANSManagedObjectContextImportExtensionsTextCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A548D71E7C5B7A00A6C4A1 /* KBANSManagedObjectContextImportExtensionsTextCase.m */; };
 		07A548DA1E7C5B7A00A6C4A1 /* Baxter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07A548C11E7C599600A6C4A1 /* Baxter.framework */; };
-		07A548E21E7C5CB800A6C4A1 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07A548E11E7C5CB800A6C4A1 /* CoreData.framework */; };
 		07A548E51E7C5CCF00A6C4A1 /* NSManagedObjectContext+KBAExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 07A548E31E7C5CCF00A6C4A1 /* NSManagedObjectContext+KBAExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		07A548E61E7C5CCF00A6C4A1 /* NSManagedObjectContext+KBAExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A548E41E7C5CCF00A6C4A1 /* NSManagedObjectContext+KBAExtensions.m */; };
-		07A548E81E7C5E1500A6C4A1 /* Stanley.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07A548E71E7C5E1500A6C4A1 /* Stanley.framework */; };
 		07A548EC1E7C5FE700A6C4A1 /* KBAManagedObjectEntityMapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 07A548EB1E7C5FE700A6C4A1 /* KBAManagedObjectEntityMapping.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		07A548EE1E7C604C00A6C4A1 /* KBAManagedObjectPropertyMapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 07A548ED1E7C604C00A6C4A1 /* KBAManagedObjectPropertyMapping.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		07A548F11E7C60BC00A6C4A1 /* KBADefaultManagedObjectEntityMapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 07A548EF1E7C60BC00A6C4A1 /* KBADefaultManagedObjectEntityMapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
@@ -58,9 +52,7 @@
 		07A5491A1E7C684B00A6C4A1 /* KBADefaultManagedObjectPropertyMapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 07A548F31E7C613800A6C4A1 /* KBADefaultManagedObjectPropertyMapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		07A5491B1E7C684B00A6C4A1 /* KBADefaultManagedObjectPropertyMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A548F41E7C613800A6C4A1 /* KBADefaultManagedObjectPropertyMapping.m */; };
 		07A549251E7C689000A6C4A1 /* Baxter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07A549051E7C677300A6C4A1 /* Baxter.framework */; };
-		07A5492C1E7C68A500A6C4A1 /* Stanley.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07A5492B1E7C68A500A6C4A1 /* Stanley.framework */; };
 		07A5492E1E7C68AA00A6C4A1 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07A5492D1E7C68AA00A6C4A1 /* CoreData.framework */; };
-		07A549301E7C690E00A6C4A1 /* Stanley.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07A5492F1E7C690E00A6C4A1 /* Stanley.framework */; };
 		07A549321E7C696900A6C4A1 /* Test.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 07A548FE1E7C658C00A6C4A1 /* Test.xcdatamodel */; };
 		07A549331E7C696D00A6C4A1 /* KBANSManagedObjectContextImportExtensionsTextCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A548D71E7C5B7A00A6C4A1 /* KBANSManagedObjectContextImportExtensionsTextCase.m */; };
 		07A549421E7C6A3600A6C4A1 /* Baxter.h in Headers */ = {isa = PBXBuildFile; fileRef = 07A548C41E7C599600A6C4A1 /* Baxter.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -79,9 +71,6 @@
 		07A5495E1E7C6AF900A6C4A1 /* NSManagedObjectContext+KBAImportExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A548F81E7C622200A6C4A1 /* NSManagedObjectContext+KBAImportExtensions.m */; };
 		07A5495F1E7C6AF900A6C4A1 /* KBADefaultManagedObjectEntityMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A548F01E7C60BC00A6C4A1 /* KBADefaultManagedObjectEntityMapping.m */; };
 		07A549601E7C6AF900A6C4A1 /* KBADefaultManagedObjectPropertyMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A548F41E7C613800A6C4A1 /* KBADefaultManagedObjectPropertyMapping.m */; };
-		07A549621E7C6B2000A6C4A1 /* Stanley.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07A549611E7C6B2000A6C4A1 /* Stanley.framework */; };
-		07A549641E7C6B3C00A6C4A1 /* Stanley.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07A549631E7C6B3C00A6C4A1 /* Stanley.framework */; };
-		07A549661E7C6B4000A6C4A1 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07A549651E7C6B4000A6C4A1 /* CoreData.framework */; };
 		07A549751E7C6C7D00A6C4A1 /* Baxter.h in Headers */ = {isa = PBXBuildFile; fileRef = 07A548C41E7C599600A6C4A1 /* Baxter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		07A549761E7C6C7D00A6C4A1 /* NSFetchRequest+KBAExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 07A548CD1E7C5AD000A6C4A1 /* NSFetchRequest+KBAExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		07A549771E7C6C7D00A6C4A1 /* NSFetchRequest+KBAExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A548CE1E7C5AD000A6C4A1 /* NSFetchRequest+KBAExtensions.m */; };
@@ -98,6 +87,11 @@
 		07DED8871EAA546600C40F88 /* KBANSFetchRequestExtensionsTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DED8861EAA546600C40F88 /* KBANSFetchRequestExtensionsTestCase.m */; };
 		07DED8881EAA546600C40F88 /* KBANSFetchRequestExtensionsTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DED8861EAA546600C40F88 /* KBANSFetchRequestExtensionsTestCase.m */; };
 		07DED8891EAA546600C40F88 /* KBANSFetchRequestExtensionsTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DED8861EAA546600C40F88 /* KBANSFetchRequestExtensionsTestCase.m */; };
+		4D946E4B223041F900BFC5A2 /* Stanley.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D946E4A223041F900BFC5A2 /* Stanley.framework */; };
+		4D946E4C223041F900BFC5A2 /* Stanley.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4D946E4A223041F900BFC5A2 /* Stanley.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4D946E4E2230420A00BFC5A2 /* Stanley.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D946E4D2230420A00BFC5A2 /* Stanley.framework */; };
+		4D946E502230421B00BFC5A2 /* Stanley.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D946E4F2230421B00BFC5A2 /* Stanley.framework */; };
+		4D946E522230422100BFC5A2 /* Stanley.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D946E512230422100BFC5A2 /* Stanley.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -139,7 +133,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				07218241221E57C300103781 /* Baxter.framework in Embed Frameworks */,
-				0721823E221E57B800103781 /* Stanley.framework in Embed Frameworks */,
+				4D946E4C223041F900BFC5A2 /* Stanley.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -168,8 +162,6 @@
 		07218257221E62CB00103781 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/DetailViewController.xib; sourceTree = "<group>"; };
 		072C4145221D972F0091A6D0 /* KBAFetchedResultsObserver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KBAFetchedResultsObserver.h; sourceTree = "<group>"; };
 		072C4146221D972F0091A6D0 /* KBAFetchedResultsObserver.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KBAFetchedResultsObserver.m; sourceTree = "<group>"; };
-		0745314F1E9EA5E600CEF9E0 /* Stanley.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Stanley.framework; path = "Vendor/Stanley/build/Debug-watchos/Stanley.framework"; sourceTree = "<group>"; };
-		0795E29F1F326C2900DC0171 /* Stanley.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Stanley.framework; path = "../../Library/Developer/Xcode/DerivedData/Baxter-evreckdgsbnsgedxypslwdrqivls/Build/Products/Debug-iphonesimulator/Stanley.framework"; sourceTree = "<group>"; };
 		07A548C11E7C599600A6C4A1 /* Baxter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Baxter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		07A548C41E7C599600A6C4A1 /* Baxter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Baxter.h; sourceTree = "<group>"; };
 		07A548C51E7C599600A6C4A1 /* Baxter-iOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Baxter-iOS-Info.plist"; sourceTree = "<group>"; };
@@ -179,10 +171,8 @@
 		07A548D51E7C5B7A00A6C4A1 /* BaxterTests-iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BaxterTests-iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		07A548D71E7C5B7A00A6C4A1 /* KBANSManagedObjectContextImportExtensionsTextCase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KBANSManagedObjectContextImportExtensionsTextCase.m; sourceTree = "<group>"; };
 		07A548D91E7C5B7A00A6C4A1 /* BaxterTests-iOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BaxterTests-iOS-Info.plist"; sourceTree = "<group>"; };
-		07A548E11E7C5CB800A6C4A1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.2.sdk/System/Library/Frameworks/CoreData.framework; sourceTree = DEVELOPER_DIR; };
 		07A548E31E7C5CCF00A6C4A1 /* NSManagedObjectContext+KBAExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObjectContext+KBAExtensions.h"; sourceTree = "<group>"; };
 		07A548E41E7C5CCF00A6C4A1 /* NSManagedObjectContext+KBAExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObjectContext+KBAExtensions.m"; sourceTree = "<group>"; };
-		07A548E71E7C5E1500A6C4A1 /* Stanley.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Stanley.framework; path = "Vendor/Stanley/build/Debug-iphoneos/Stanley.framework"; sourceTree = "<group>"; };
 		07A548EB1E7C5FE700A6C4A1 /* KBAManagedObjectEntityMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KBAManagedObjectEntityMapping.h; sourceTree = "<group>"; };
 		07A548ED1E7C604C00A6C4A1 /* KBAManagedObjectPropertyMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KBAManagedObjectPropertyMapping.h; sourceTree = "<group>"; };
 		07A548EF1E7C60BC00A6C4A1 /* KBADefaultManagedObjectEntityMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KBADefaultManagedObjectEntityMapping.h; sourceTree = "<group>"; };
@@ -191,25 +181,24 @@
 		07A548F41E7C613800A6C4A1 /* KBADefaultManagedObjectPropertyMapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KBADefaultManagedObjectPropertyMapping.m; sourceTree = "<group>"; };
 		07A548F71E7C622200A6C4A1 /* NSManagedObjectContext+KBAImportExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObjectContext+KBAImportExtensions.h"; sourceTree = "<group>"; };
 		07A548F81E7C622200A6C4A1 /* NSManagedObjectContext+KBAImportExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObjectContext+KBAImportExtensions.m"; sourceTree = "<group>"; };
-		07A548FB1E7C647F00A6C4A1 /* Stanley.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Stanley.framework; path = "Vendor/Stanley/build/Debug-iphoneos/Stanley.framework"; sourceTree = "<group>"; };
 		07A548FE1E7C658C00A6C4A1 /* Test.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Test.xcdatamodel; sourceTree = "<group>"; };
 		07A549051E7C677300A6C4A1 /* Baxter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Baxter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		07A5490E1E7C680000A6C4A1 /* Baxter-macOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Baxter-macOS-Info.plist"; sourceTree = "<group>"; };
 		07A549201E7C689000A6C4A1 /* BaxterTests-macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BaxterTests-macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		07A5492B1E7C68A500A6C4A1 /* Stanley.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Stanley.framework; path = Vendor/Stanley/build/Debug/Stanley.framework; sourceTree = "<group>"; };
 		07A5492D1E7C68AA00A6C4A1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		07A5492F1E7C690E00A6C4A1 /* Stanley.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Stanley.framework; path = "../../Library/Developer/Xcode/DerivedData/Baxter-evreckdgsbnsgedxypslwdrqivls/Build/Products/Debug/Stanley.framework"; sourceTree = "<group>"; };
 		07A549311E7C696400A6C4A1 /* BaxterTests-macOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BaxterTests-macOS-Info.plist"; sourceTree = "<group>"; };
 		07A549391E7C699C00A6C4A1 /* Baxter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Baxter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		07A549411E7C69CE00A6C4A1 /* Baxter-tvOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Baxter-tvOS-Info.plist"; sourceTree = "<group>"; };
 		07A5494E1E7C6A5200A6C4A1 /* BaxterTests-tvOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BaxterTests-tvOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		07A549591E7C6A7700A6C4A1 /* BaxterTests-tvOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BaxterTests-tvOS-Info.plist"; sourceTree = "<group>"; };
-		07A549611E7C6B2000A6C4A1 /* Stanley.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Stanley.framework; path = "Vendor/Stanley/build/Debug-appletvos/Stanley.framework"; sourceTree = "<group>"; };
-		07A549631E7C6B3C00A6C4A1 /* Stanley.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Stanley.framework; path = "../../Library/Developer/Xcode/DerivedData/Baxter-evreckdgsbnsgedxypslwdrqivls/Build/Products/Debug-appletvsimulator/Stanley.framework"; sourceTree = "<group>"; };
-		07A549651E7C6B4000A6C4A1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS10.1.sdk/System/Library/Frameworks/CoreData.framework; sourceTree = DEVELOPER_DIR; };
 		07A5496C1E7C6B6000A6C4A1 /* Baxter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Baxter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		07A549741E7C6B8800A6C4A1 /* Baxter-watchOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Baxter-watchOS-Info.plist"; sourceTree = "<group>"; };
 		07DED8861EAA546600C40F88 /* KBANSFetchRequestExtensionsTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KBANSFetchRequestExtensionsTestCase.m; sourceTree = "<group>"; };
+		4D946E4A223041F900BFC5A2 /* Stanley.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Stanley.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D946E4D2230420A00BFC5A2 /* Stanley.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Stanley.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D946E4F2230421B00BFC5A2 /* Stanley.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Stanley.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D946E512230422100BFC5A2 /* Stanley.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Stanley.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D946E552230422B00BFC5A2 /* Stanley.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Stanley.framework; path = "../../Library/Developer/Xcode/DerivedData/Baxter-bimjrmvnloryybfqrelcfytjlqwc/Build/Products/Debug/Stanley.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -218,7 +207,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				07218240221E57C300103781 /* Baxter.framework in Frameworks */,
-				0721823D221E57B800103781 /* Stanley.framework in Frameworks */,
+				4D946E4B223041F900BFC5A2 /* Stanley.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -226,7 +215,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0795E2A01F326C2900DC0171 /* Stanley.framework in Frameworks */,
+				4D946E4E2230420A00BFC5A2 /* Stanley.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -234,8 +223,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				07A548E81E7C5E1500A6C4A1 /* Stanley.framework in Frameworks */,
-				07A548E21E7C5CB800A6C4A1 /* CoreData.framework in Frameworks */,
 				07A548DA1E7C5B7A00A6C4A1 /* Baxter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -244,7 +231,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				07A549301E7C690E00A6C4A1 /* Stanley.framework in Frameworks */,
+				4D946E502230421B00BFC5A2 /* Stanley.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,7 +240,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				07A5492E1E7C68AA00A6C4A1 /* CoreData.framework in Frameworks */,
-				07A5492C1E7C68A500A6C4A1 /* Stanley.framework in Frameworks */,
 				07A549251E7C689000A6C4A1 /* Baxter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -262,7 +248,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				07A549621E7C6B2000A6C4A1 /* Stanley.framework in Frameworks */,
+				4D946E522230422100BFC5A2 /* Stanley.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,8 +256,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				07A549661E7C6B4000A6C4A1 /* CoreData.framework in Frameworks */,
-				07A549641E7C6B3C00A6C4A1 /* Stanley.framework in Frameworks */,
 				07A549531E7C6A5200A6C4A1 /* Baxter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -280,7 +264,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				074531501E9EA5E600CEF9E0 /* Stanley.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -408,17 +391,12 @@
 		07A548E01E7C5CB800A6C4A1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				0795E29F1F326C2900DC0171 /* Stanley.framework */,
-				0745314F1E9EA5E600CEF9E0 /* Stanley.framework */,
-				07A549651E7C6B4000A6C4A1 /* CoreData.framework */,
-				07A549631E7C6B3C00A6C4A1 /* Stanley.framework */,
-				07A549611E7C6B2000A6C4A1 /* Stanley.framework */,
-				07A5492F1E7C690E00A6C4A1 /* Stanley.framework */,
+				4D946E512230422100BFC5A2 /* Stanley.framework */,
+				4D946E4F2230421B00BFC5A2 /* Stanley.framework */,
+				4D946E4D2230420A00BFC5A2 /* Stanley.framework */,
+				4D946E552230422B00BFC5A2 /* Stanley.framework */,
+				4D946E4A223041F900BFC5A2 /* Stanley.framework */,
 				07A5492D1E7C68AA00A6C4A1 /* CoreData.framework */,
-				07A5492B1E7C68A500A6C4A1 /* Stanley.framework */,
-				07A548FB1E7C647F00A6C4A1 /* Stanley.framework */,
-				07A548E71E7C5E1500A6C4A1 /* Stanley.framework */,
-				07A548E11E7C5CB800A6C4A1 /* CoreData.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";

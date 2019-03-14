@@ -22,6 +22,7 @@
 		07218258221E62CB00103781 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07218256221E62CB00103781 /* DetailViewController.xib */; };
 		072C4147221D972F0091A6D0 /* KBAFetchedResultsObserver.h in Headers */ = {isa = PBXBuildFile; fileRef = 072C4145221D972F0091A6D0 /* KBAFetchedResultsObserver.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		072C4148221D972F0091A6D0 /* KBAFetchedResultsObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 072C4146221D972F0091A6D0 /* KBAFetchedResultsObserver.m */; };
+		0753CE322239D07E00D8F23A /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0753CE312239D07E00D8F23A /* ViewModel.swift */; };
 		07A548C61E7C599600A6C4A1 /* Baxter.h in Headers */ = {isa = PBXBuildFile; fileRef = 07A548C41E7C599600A6C4A1 /* Baxter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		07A548CF1E7C5AD000A6C4A1 /* NSFetchRequest+KBAExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 07A548CD1E7C5AD000A6C4A1 /* NSFetchRequest+KBAExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		07A548D01E7C5AD000A6C4A1 /* NSFetchRequest+KBAExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A548CE1E7C5AD000A6C4A1 /* NSFetchRequest+KBAExtensions.m */; };
@@ -162,6 +163,8 @@
 		07218257221E62CB00103781 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/DetailViewController.xib; sourceTree = "<group>"; };
 		072C4145221D972F0091A6D0 /* KBAFetchedResultsObserver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KBAFetchedResultsObserver.h; sourceTree = "<group>"; };
 		072C4146221D972F0091A6D0 /* KBAFetchedResultsObserver.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KBAFetchedResultsObserver.m; sourceTree = "<group>"; };
+		0753CE302239D07E00D8F23A /* Demo-iOS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Demo-iOS-Bridging-Header.h"; sourceTree = "<group>"; };
+		0753CE312239D07E00D8F23A /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		07A548C11E7C599600A6C4A1 /* Baxter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Baxter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		07A548C41E7C599600A6C4A1 /* Baxter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Baxter.h; sourceTree = "<group>"; };
 		07A548C51E7C599600A6C4A1 /* Baxter-iOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Baxter-iOS-Info.plist"; sourceTree = "<group>"; };
@@ -275,6 +278,7 @@
 			children = (
 				07218229221E577500103781 /* AppDelegate.h */,
 				0721822A221E577500103781 /* AppDelegate.m */,
+				0753CE312239D07E00D8F23A /* ViewModel.swift */,
 				0721822C221E577500103781 /* ViewController.h */,
 				0721822D221E577600103781 /* ViewController.m */,
 				07218253221E61F300103781 /* DetailViewController.h */,
@@ -288,6 +292,7 @@
 				07218251221E5AEA00103781 /* LoremIpsum.m */,
 				07218244221E58FF00103781 /* Model.xcdatamodeld */,
 				07218248221E5A4A00103781 /* CoreData */,
+				0753CE302239D07E00D8F23A /* Demo-iOS-Bridging-Header.h */,
 			);
 			path = "Demo-iOS";
 			sourceTree = "<group>";
@@ -676,6 +681,7 @@
 					07218226221E577500103781 = {
 						CreatedOnToolsVersion = 10.1;
 						DevelopmentTeam = 74KPPW2K35;
+						LastSwiftMigration = 1010;
 						ProvisioningStyle = Automatic;
 					};
 					07A548C01E7C599600A6C4A1 = {
@@ -879,6 +885,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0721822E221E577600103781 /* ViewController.m in Sources */,
+				0753CE322239D07E00D8F23A /* ViewModel.swift in Sources */,
 				0721824E221E5A4B00103781 /* Row.m in Sources */,
 				0721824F221E5A4B00103781 /* _Row.m in Sources */,
 				07218255221E61F300103781 /* DetailViewController.m in Sources */,
@@ -1076,6 +1083,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kosoku.baxter.Demo-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "Demo-iOS/Demo-iOS-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1136,6 +1146,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kosoku.baxter.Demo-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "Demo-iOS/Demo-iOS-Bridging-Header.h";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};

@@ -20,20 +20,21 @@
 #import "ViewController.h"
 #import "DetailViewController.h"
 #import "Row.h"
+#import "Demo_iOS-Swift.h"
 
 #import <Baxter/Baxter.h>
 #import <Stanley/Stanley.h>
 
-@interface ViewController () <KBAFetchedResultsObserverDelegate>
-@property (strong,nonatomic) KBAFetchedResultsObserver *fetchedResultsObserver;
-
-@property (strong,nonatomic) NSPersistentContainer *persistentContainer;
+@interface ViewController ()
+@property (strong,nonatomic) ViewModel *viewModel;
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.viewModel = [[ViewModel alloc] init];
     
     self.title = @"Baxter";
     self.view.backgroundColor = UIColor.whiteColor;
@@ -42,29 +43,13 @@
     
     self.navigationItem.rightBarButtonItems = @[addItem, self.editButtonItem];
     
-    self.persistentContainer = [[NSPersistentContainer alloc] initWithName:@"Model"];
-    
-    NSPersistentStoreDescription *desc = [[NSPersistentStoreDescription alloc] initWithURL:[NSFileManager.defaultManager.KST_applicationSupportDirectoryURL URLByAppendingPathComponent:@"Model.sqlite"]];
-    
-    desc.type = NSInMemoryStoreType;
-    desc.shouldAddStoreAsynchronously = NO;
-    desc.shouldMigrateStoreAutomatically = YES;
-    desc.shouldInferMappingModelAutomatically = YES;
-    
-    self.persistentContainer.persistentStoreDescriptions = @[desc];
-    [self.persistentContainer loadPersistentStoresWithCompletionHandler:^(NSPersistentStoreDescription * _Nonnull psd, NSError * _Nullable error) {
-        KSTLog(@"%@ %@",psd,error);
-    }];
-    
     self.tableView.estimatedRowHeight = 44.0;
     
-    self.fetchedResultsObserver = [[KBAFetchedResultsObserver alloc] initWithFetchRequest:Row.fetchRequestForRowsSortedByCreatedAt context:self.persistentContainer.viewContext];
-    self.fetchedResultsObserver.tableView = self.tableView;
-    self.fetchedResultsObserver.delegate = self;
+    self.viewModel.fetchedResultsObserver.tableView = self.tableView;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.fetchedResultsObserver.fetchedObjects.count;
+    return self.viewModel.fetchedResultsObserver.fetchedObjects.count;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *retval = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass(UITableViewCell.class)];
@@ -73,7 +58,7 @@
         retval = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:NSStringFromClass(UITableViewCell.class)];
     }
     
-    Row *entity = [self.fetchedResultsObserver objectAtIndexPath:indexPath];
+    Row *entity = [self.viewModel.fetchedResultsObserver objectAtIndexPath:indexPath];
     
     retval.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     retval.textLabel.numberOfLines = 0;
@@ -85,24 +70,20 @@
 }
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        Row *entity = [self.fetchedResultsObserver objectAtIndexPath:indexPath];
+        Row *entity = [self.viewModel.fetchedResultsObserver objectAtIndexPath:indexPath];
         
         [entity.managedObjectContext deleteObject:entity];
     }
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    DetailViewController *viewController = [[DetailViewController alloc] initWithEntity:[self.fetchedResultsObserver objectAtIndexPath:indexPath]];
+    DetailViewController *viewController = [[DetailViewController alloc] initWithEntity:[self.viewModel.fetchedResultsObserver objectAtIndexPath:indexPath]];
     
     [self.navigationController pushViewController:viewController animated:YES];
 }
 
-- (void)fetchedResultsObserver:(KBAFetchedResultsObserver *)observer didObserveChanges:(NSArray<id<KBAFetchedResultsObserverChange>> *)changes {
-    KSTLogObject(changes);
-}
-
 - (IBAction)_addItemAction:(id)sender {
-    [Row insertInManagedObjectContext:self.persistentContainer.viewContext];
+    [Row insertInManagedObjectContext:self.viewModel.persistentContainer.viewContext];
 }
 
 @end

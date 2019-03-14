@@ -168,10 +168,7 @@
     
     [self _generateKVOForFetchedObjects];
     
-    if ([self.delegate respondsToSelector:@selector(fetchedResultsObserver:didObserveChanges:)] ||
-        // Swift mangled name
-        [self.delegate respondsToSelector:NSSelectorFromString(@"fetchedResultsObserver(observer:didObserveChanges:)")]) {
-        
+    if ([self.delegate respondsToSelector:@selector(fetchedResultsObserver:didObserveChanges:)]) {
         [self.delegate fetchedResultsObserver:self didObserveChanges:self.changeImpls];
         
         self.changeImpls = nil;

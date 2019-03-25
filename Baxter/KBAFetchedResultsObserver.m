@@ -82,17 +82,17 @@
     }
     
     switch (type) {
-        case NSFetchedResultsChangeMove:
-            [self.itemChanges addObject:@{@(type): @[indexPath, newIndexPath]}];
-            break;
-        case NSFetchedResultsChangeDelete:
+        case NSFetchedResultsChangeUpdate:
             [self.itemChanges addObject:@{@(type): @[indexPath]}];
             break;
         case NSFetchedResultsChangeInsert:
             [self.itemChanges addObject:@{@(type): @[newIndexPath]}];
             break;
-        case NSFetchedResultsChangeUpdate:
+        case NSFetchedResultsChangeDelete:
             [self.itemChanges addObject:@{@(type): @[indexPath]}];
+            break;
+        case NSFetchedResultsChangeMove:
+            [self.itemChanges addObject:@{@(type): @[indexPath, newIndexPath]}];
             break;
         default:
             break;
@@ -141,31 +141,73 @@
             }
         }
     };
+    void(^completion)(UIView *) = ^(UIView *view){
+#if TARGET_OS_IPHONE
+        UITableView *tableView = [view isKindOfClass:UITableView.class] ? (UITableView *)view : nil;
+        UICollectionView *collectionView = [view isKindOfClass:UICollectionView.class] ? (UICollectionView *)view : nil;
+#endif
+        
+        for (NSDictionary *change in self.itemChanges) {
+            NSFetchedResultsChangeType type = [change.allKeys.firstObject unsignedIntegerValue];
+            NSArray *indexPaths = change.allValues.firstObject;
+            
+            switch (type) {
+                case NSFetchedResultsChangeMove:
+#if TARGET_OS_IPHONE
+                    if (![indexPaths.firstObject isEqual:indexPaths.lastObject]) {
+                        [tableView reloadRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationNone];
+                        [collectionView reloadItemsAtIndexPaths:indexPaths];
+                    }
+#endif
+                    break;
+                default:
+                    break;
+            }
+        }
+    };
 #if TARGET_OS_IPHONE
     if (self.tableView != nil) {
         if (@available(iOS 11.0, *)) {
             [self.tableView performBatchUpdates:^{
                 block(self.tableView);
-            } completion:nil];
+            } completion:^(BOOL finished) {
+                if (finished) {
+                    completion(self.tableView);
+                }
+                
+                self.itemChanges = nil;
+            }];
         } else {
+            [CATransaction begin];
+            [CATransaction setCompletionBlock:^{
+                completion(self.tableView);
+                
+                self.itemChanges = nil;
+            }];
+            
             [self.tableView beginUpdates];
             
             block(self.tableView);
             
             [self.tableView endUpdates];
+            
+            [CATransaction commit];
         }
     }
     if (self.collectionView != nil) {
         [self.collectionView performBatchUpdates:^{
             block(self.collectionView);
-        } completion:nil];
+        } completion:^(BOOL finished) {
+            if (finished) {
+                completion(self.collectionView);
+            }
+            
+            self.itemChanges = nil;
+        }];
     }
 #else
     // TODO: add NS equivalents
 #endif
-    
-    self.itemChanges = nil;
-    
     [self _generateKVOForFetchedObjects];
     
     if ([self.delegate respondsToSelector:@selector(fetchedResultsObserver:didObserveChanges:)]) {

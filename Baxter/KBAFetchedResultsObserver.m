@@ -171,9 +171,7 @@
             [self.tableView performBatchUpdates:^{
                 block(self.tableView);
             } completion:^(BOOL finished) {
-                if (finished) {
-                    completion(self.tableView);
-                }
+                completion(self.tableView);
                 
                 self.itemChanges = nil;
             }];
@@ -198,9 +196,7 @@
         [self.collectionView performBatchUpdates:^{
             block(self.collectionView);
         } completion:^(BOOL finished) {
-            if (finished) {
-                completion(self.collectionView);
-            }
+            completion(self.collectionView);
             
             self.itemChanges = nil;
         }];

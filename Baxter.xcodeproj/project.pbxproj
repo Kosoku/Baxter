@@ -85,6 +85,7 @@
 		07A5497F1E7C6C7D00A6C4A1 /* KBADefaultManagedObjectEntityMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A548F01E7C60BC00A6C4A1 /* KBADefaultManagedObjectEntityMapping.m */; };
 		07A549801E7C6C7D00A6C4A1 /* KBADefaultManagedObjectPropertyMapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 07A548F31E7C613800A6C4A1 /* KBADefaultManagedObjectPropertyMapping.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		07A549811E7C6C7D00A6C4A1 /* KBADefaultManagedObjectPropertyMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A548F41E7C613800A6C4A1 /* KBADefaultManagedObjectPropertyMapping.m */; };
+		07AC170722C1316300258701 /* Stanley.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07AC170622C1316300258701 /* Stanley.framework */; };
 		07DED8871EAA546600C40F88 /* KBANSFetchRequestExtensionsTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DED8861EAA546600C40F88 /* KBANSFetchRequestExtensionsTestCase.m */; };
 		07DED8881EAA546600C40F88 /* KBANSFetchRequestExtensionsTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DED8861EAA546600C40F88 /* KBANSFetchRequestExtensionsTestCase.m */; };
 		07DED8891EAA546600C40F88 /* KBANSFetchRequestExtensionsTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DED8861EAA546600C40F88 /* KBANSFetchRequestExtensionsTestCase.m */; };
@@ -196,6 +197,7 @@
 		07A549591E7C6A7700A6C4A1 /* BaxterTests-tvOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BaxterTests-tvOS-Info.plist"; sourceTree = "<group>"; };
 		07A5496C1E7C6B6000A6C4A1 /* Baxter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Baxter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		07A549741E7C6B8800A6C4A1 /* Baxter-watchOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Baxter-watchOS-Info.plist"; sourceTree = "<group>"; };
+		07AC170622C1316300258701 /* Stanley.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Stanley.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		07DED8861EAA546600C40F88 /* KBANSFetchRequestExtensionsTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KBANSFetchRequestExtensionsTestCase.m; sourceTree = "<group>"; };
 		4D946E4A223041F900BFC5A2 /* Stanley.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Stanley.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D946E4D2230420A00BFC5A2 /* Stanley.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Stanley.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -267,6 +269,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07AC170722C1316300258701 /* Stanley.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -396,6 +399,7 @@
 		07A548E01E7C5CB800A6C4A1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				07AC170622C1316300258701 /* Stanley.framework */,
 				4D946E512230422100BFC5A2 /* Stanley.framework */,
 				4D946E4F2230421B00BFC5A2 /* Stanley.framework */,
 				4D946E4D2230420A00BFC5A2 /* Stanley.framework */,
@@ -720,6 +724,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);

@@ -20,6 +20,6 @@
 #ifndef __BAXTER_INFO__
 #define __BAXTER_INFO__
 
-#define KBA_BUNDLE_SHORT_VERSION_STRING 1.5.6
+#define KBA_BUNDLE_SHORT_VERSION_STRING 1.5.7
 
 #endif

@@ -141,14 +141,14 @@ FOUNDATION_EXTERN KBANSFetchRequestOptionsKey const KBANSFetchRequestOptionsKeyH
  @param offset The fetch offset to apply to the fetch request
  @return The fetch request
  */
-+ (NSFetchRequest *)KBA_fetchRequestForEntityName:(NSString *)entityName predicate:(nullable NSPredicate *)predicate sortDescriptors:(nullable NSArray<NSSortDescriptor *> *)sortDescriptors limit:(NSUInteger)limit offset:(NSUInteger)offset;
++ (instancetype)KBA_fetchRequestForEntityName:(NSString *)entityName predicate:(nullable NSPredicate *)predicate sortDescriptors:(nullable NSArray<NSSortDescriptor *> *)sortDescriptors limit:(NSUInteger)limit offset:(NSUInteger)offset;
 /**
  Create and return a fetch request with the provided options.
  
  @param options The dictionary of options to use when creating the fetch request
  @return The fetch request
  */
-+ (NSFetchRequest *)KBA_fetchRequestWithOptions:(NSDictionary<KBANSFetchRequestOptionsKey, id> *)options;
++ (instancetype)KBA_fetchRequestWithOptions:(NSDictionary<KBANSFetchRequestOptionsKey, id> *)options;
 
 @end
 

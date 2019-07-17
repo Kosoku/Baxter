@@ -39,7 +39,7 @@ KBANSFetchRequestOptionsKey const KBANSFetchRequestOptionsKeyHavingPredicate = @
 
 @implementation NSFetchRequest (KBAExtensions)
 
-+ (NSFetchRequest *)KBA_fetchRequestForEntityName:(NSString *)entityName predicate:(NSPredicate *)predicate sortDescriptors:(NSArray *)sortDescriptors limit:(NSUInteger)limit offset:(NSUInteger)offset; {
++ (instancetype)KBA_fetchRequestForEntityName:(NSString *)entityName predicate:(NSPredicate *)predicate sortDescriptors:(NSArray *)sortDescriptors limit:(NSUInteger)limit offset:(NSUInteger)offset; {
     NSMutableDictionary *options = [NSMutableDictionary dictionaryWithDictionary:@{KBANSFetchRequestOptionsKeyEntityName: entityName}];
     
     if (predicate != nil) {
@@ -57,10 +57,10 @@ KBANSFetchRequestOptionsKey const KBANSFetchRequestOptionsKeyHavingPredicate = @
     
     return [self KBA_fetchRequestWithOptions:options];
 }
-+ (NSFetchRequest *)KBA_fetchRequestWithOptions:(NSDictionary<KBANSFetchRequestOptionsKey,id> *)options {
++ (instancetype)KBA_fetchRequestWithOptions:(NSDictionary<KBANSFetchRequestOptionsKey,id> *)options {
     NSParameterAssert(options[KBANSFetchRequestOptionsKeyEntityName] != nil);
     
-    NSFetchRequest *retval = [[NSFetchRequest alloc] initWithEntityName:options[KBANSFetchRequestOptionsKeyEntityName]];
+    NSFetchRequest *retval = [[[self class] alloc] initWithEntityName:options[KBANSFetchRequestOptionsKeyEntityName]];
     
     if (options[KBANSFetchRequestOptionsKeyIncludesSubentities] != nil) {
         retval.includesSubentities = [options[KBANSFetchRequestOptionsKeyIncludesSubentities] boolValue];

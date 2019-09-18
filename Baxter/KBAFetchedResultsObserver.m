@@ -272,6 +272,10 @@
 - (NSArray *)fetchedObjects {
     return self.fetchedResultsController.fetchedObjects;
 }
+
+- (NSArray<id<NSFetchedResultsSectionInfo>> *)fetchedSections {
+    return self.fetchedResultsController.sections;
+}
 #pragma mark *** Private Methods ***
 - (void)_generateKVOForFetchedObjects; {
     [self willChangeValueForKey:@kstKeypath(self,fetchedObjects)];

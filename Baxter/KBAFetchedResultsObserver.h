@@ -58,6 +58,10 @@ NS_ASSUME_NONNULL_BEGIN
  Get the fetched objects from the underlying fetched results controller.
  */
 @property (readonly,nonatomic,nullable) NSArray<ResultType> *fetchedObjects;
+/**
+ Get the fetched sections from the underlying fetched results controller.
+ */
+@property (readonly,nonatomic,nullable) NSArray<id<NSFetchedResultsSectionInfo>> *fetchedSections;
 
 
 /**

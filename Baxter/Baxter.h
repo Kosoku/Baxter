@@ -32,6 +32,9 @@ FOUNDATION_EXPORT const unsigned char BaxterVersionString[];
 
 #import <Baxter/NSManagedObjectContext+KBAImportExtensions.h>
 
+#if (TARGET_OS_IOS || TARGET_OS_OSX)
+#import <Baxter/KBAFetchedResultsController.h>
+#endif
 #if TARGET_OS_IOS
 #import <Baxter/KBAFetchedResultsObserver.h>
 #endif

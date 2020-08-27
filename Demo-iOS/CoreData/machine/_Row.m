@@ -40,6 +40,8 @@
 
 @dynamic title;
 
+@dynamic section;
+
 @end
 
 @implementation RowAttributes 
@@ -54,6 +56,12 @@
 }
 + (NSString *)title {
 	return @"title";
+}
+@end
+
+@implementation RowRelationships 
++ (NSString *)section {
+	return @"section";
 }
 @end
 

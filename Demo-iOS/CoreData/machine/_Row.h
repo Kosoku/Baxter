@@ -11,6 +11,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@class Section;
+
 @interface RowID : NSManagedObjectID {}
 @end
 
@@ -28,6 +30,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, strong, nullable) NSString* title;
 
+@property (nonatomic, strong, nullable) Section *section;
+
 @end
 
 @interface _Row (CoreDataGeneratedPrimitiveAccessors)
@@ -44,6 +48,9 @@ NS_ASSUME_NONNULL_BEGIN
 - (nullable NSString*)primitiveTitle;
 - (void)setPrimitiveTitle:(nullable NSString*)value;
 
+- (nullable Section*)primitiveSection;
+- (void)setPrimitiveSection:(nullable Section*)value;
+
 @end
 
 @interface RowAttributes: NSObject 
@@ -51,6 +58,10 @@ NS_ASSUME_NONNULL_BEGIN
 + (NSString *)identifier;
 + (NSString *)summary;
 + (NSString *)title;
+@end
+
+@interface RowRelationships: NSObject
++ (NSString *)section;
 @end
 
 NS_ASSUME_NONNULL_END

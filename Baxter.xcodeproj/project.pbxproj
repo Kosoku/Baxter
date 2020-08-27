@@ -94,6 +94,12 @@
 		4D946E4E2230420A00BFC5A2 /* Stanley.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D946E4D2230420A00BFC5A2 /* Stanley.framework */; };
 		4D946E502230421B00BFC5A2 /* Stanley.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D946E4F2230421B00BFC5A2 /* Stanley.framework */; };
 		4D946E522230422100BFC5A2 /* Stanley.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D946E512230422100BFC5A2 /* Stanley.framework */; };
+		79266A3B24F7F3A000EC3767 /* KBAFetchedResultsController.h in Headers */ = {isa = PBXBuildFile; fileRef = 79266A3924F7F3A000EC3767 /* KBAFetchedResultsController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		79266A3C24F7F3A000EC3767 /* KBAFetchedResultsController.h in Headers */ = {isa = PBXBuildFile; fileRef = 79266A3924F7F3A000EC3767 /* KBAFetchedResultsController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		79266A3D24F7F3A000EC3767 /* KBAFetchedResultsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79266A3A24F7F3A000EC3767 /* KBAFetchedResultsController.m */; };
+		79266A3E24F7F3A000EC3767 /* KBAFetchedResultsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79266A3A24F7F3A000EC3767 /* KBAFetchedResultsController.m */; };
+		79266A4124F807B900EC3767 /* _Section.m in Sources */ = {isa = PBXBuildFile; fileRef = 79266A4024F807B900EC3767 /* _Section.m */; };
+		79266A4424F807C200EC3767 /* Section.m in Sources */ = {isa = PBXBuildFile; fileRef = 79266A4224F807C100EC3767 /* Section.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -204,6 +210,12 @@
 		4D946E4F2230421B00BFC5A2 /* Stanley.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Stanley.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D946E512230422100BFC5A2 /* Stanley.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Stanley.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D946E552230422B00BFC5A2 /* Stanley.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Stanley.framework; path = "../../Library/Developer/Xcode/DerivedData/Baxter-bimjrmvnloryybfqrelcfytjlqwc/Build/Products/Debug/Stanley.framework"; sourceTree = "<group>"; };
+		79266A3924F7F3A000EC3767 /* KBAFetchedResultsController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KBAFetchedResultsController.h; sourceTree = "<group>"; };
+		79266A3A24F7F3A000EC3767 /* KBAFetchedResultsController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KBAFetchedResultsController.m; sourceTree = "<group>"; };
+		79266A3F24F807B900EC3767 /* _Section.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _Section.h; sourceTree = "<group>"; };
+		79266A4024F807B900EC3767 /* _Section.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _Section.m; sourceTree = "<group>"; };
+		79266A4224F807C100EC3767 /* Section.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Section.m; sourceTree = "<group>"; };
+		79266A4324F807C200EC3767 /* Section.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Section.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -305,6 +317,8 @@
 			children = (
 				0721824D221E5A4A00103781 /* Row.h */,
 				07218249221E5A4A00103781 /* Row.m */,
+				79266A4324F807C200EC3767 /* Section.h */,
+				79266A4224F807C100EC3767 /* Section.m */,
 				0721824A221E5A4A00103781 /* machine */,
 			);
 			path = CoreData;
@@ -315,6 +329,8 @@
 			children = (
 				0721824B221E5A4A00103781 /* _Row.m */,
 				0721824C221E5A4A00103781 /* _Row.h */,
+				79266A3F24F807B900EC3767 /* _Section.h */,
+				79266A4024F807B900EC3767 /* _Section.m */,
 			);
 			path = machine;
 			sourceTree = "<group>";
@@ -322,6 +338,8 @@
 		072C4144221D97000091A6D0 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				79266A3924F7F3A000EC3767 /* KBAFetchedResultsController.h */,
+				79266A3A24F7F3A000EC3767 /* KBAFetchedResultsController.m */,
 				072C4145221D972F0091A6D0 /* KBAFetchedResultsObserver.h */,
 				072C4146221D972F0091A6D0 /* KBAFetchedResultsObserver.m */,
 			);
@@ -462,6 +480,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79266A3B24F7F3A000EC3767 /* KBAFetchedResultsController.h in Headers */,
 				07A548F91E7C622200A6C4A1 /* NSManagedObjectContext+KBAImportExtensions.h in Headers */,
 				07A548F11E7C60BC00A6C4A1 /* KBADefaultManagedObjectEntityMapping.h in Headers */,
 				07A548EC1E7C5FE700A6C4A1 /* KBAManagedObjectEntityMapping.h in Headers */,
@@ -480,6 +499,7 @@
 			files = (
 				07A549141E7C684B00A6C4A1 /* KBAManagedObjectEntityMapping.h in Headers */,
 				07A5490F1E7C684B00A6C4A1 /* Baxter.h in Headers */,
+				79266A3C24F7F3A000EC3767 /* KBAFetchedResultsController.h in Headers */,
 				07A549181E7C684B00A6C4A1 /* KBADefaultManagedObjectEntityMapping.h in Headers */,
 				07A549121E7C684B00A6C4A1 /* NSManagedObjectContext+KBAExtensions.h in Headers */,
 				07A549101E7C684B00A6C4A1 /* NSFetchRequest+KBAExtensions.h in Headers */,
@@ -691,6 +711,7 @@
 					07A548C01E7C599600A6C4A1 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 74KPPW2K35;
+						LastSwiftMigration = 1160;
 						ProvisioningStyle = Automatic;
 					};
 					07A548D41E7C5B7A00A6C4A1 = {
@@ -897,7 +918,9 @@
 				07218239221E577700103781 /* main.m in Sources */,
 				07218252221E5AEA00103781 /* LoremIpsum.m in Sources */,
 				0721822B221E577500103781 /* AppDelegate.m in Sources */,
+				79266A4424F807C200EC3767 /* Section.m in Sources */,
 				07218246221E58FF00103781 /* Model.xcdatamodeld in Sources */,
+				79266A4124F807B900EC3767 /* _Section.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -905,6 +928,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79266A3D24F7F3A000EC3767 /* KBAFetchedResultsController.m in Sources */,
 				07A548FA1E7C622200A6C4A1 /* NSManagedObjectContext+KBAImportExtensions.m in Sources */,
 				07A548E61E7C5CCF00A6C4A1 /* NSManagedObjectContext+KBAExtensions.m in Sources */,
 				07A548F21E7C60BC00A6C4A1 /* KBADefaultManagedObjectEntityMapping.m in Sources */,
@@ -933,6 +957,7 @@
 				07A5491B1E7C684B00A6C4A1 /* KBADefaultManagedObjectPropertyMapping.m in Sources */,
 				07A549111E7C684B00A6C4A1 /* NSFetchRequest+KBAExtensions.m in Sources */,
 				07A549171E7C684B00A6C4A1 /* NSManagedObjectContext+KBAImportExtensions.m in Sources */,
+				79266A3E24F7F3A000EC3767 /* KBAFetchedResultsController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1080,7 +1105,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = "Demo-iOS/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -1144,7 +1169,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = "Demo-iOS/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -1230,6 +1255,8 @@
 				PRODUCT_NAME = Baxter;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -1289,6 +1316,7 @@
 				PRODUCT_NAME = Baxter;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";

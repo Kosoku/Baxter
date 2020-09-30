@@ -127,7 +127,7 @@
     
     KSTDispatchMainAsync(^{
         [self.updatedObjectIDs unionSet:updatedObjectIDs];
-    })
+    });
 }
 - (void)_contextDidSaveNotification:(NSNotification *)note {
     KSTDispatchMainAsync(^{
@@ -146,7 +146,7 @@
         }
         
         [self.updatedObjectIDs removeAllObjects];
-    })
+    });
 }
 
 - (instancetype)initWithRelationshipKeyPaths:(NSSet<KBARelationshipKeyPath *> *)relationshipKeyPaths fetchedResultsController:(KBAFetchedResultsController *)fetchedResultsController {

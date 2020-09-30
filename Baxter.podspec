@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'Baxter'
-  s.version          = '1.7.1'
+  s.version          = '1.7.2'
   s.summary          = 'Baxter is a iOS/macOS/tvOS/watchOS framework that extends the CoreData framework.'
   s.description      = <<-DESC
 Baxter is a iOS/macOS/tvOS/watchOS framework that extends the `CoreData` framework. It provides methods to simplify fetching and importing.

@@ -125,24 +125,28 @@
     
     NSSet<NSManagedObjectID *> *updatedObjectIDs = [updatedObjects updatedObjectIDsFor:self.relationshipKeyPaths];
     
-    [self.updatedObjectIDs unionSet:updatedObjectIDs];
+    KSTDispatchMainAsync(^{
+        [self.updatedObjectIDs unionSet:updatedObjectIDs];
+    })
 }
 - (void)_contextDidSaveNotification:(NSNotification *)note {
-    if (KSTIsEmptyObject(self.updatedObjectIDs)) {
-        return;
-    }
-    
-    NSArray<NSManagedObject *> *fetchedObjects = self.fetchedResultsController.fetchedObjects;
-    
-    for (NSManagedObject *object in fetchedObjects) {
-        if (![self.updatedObjectIDs containsObject:object.objectID]) {
-            continue;
+    KSTDispatchMainAsync(^{
+        if (KSTIsEmptyObject(self.updatedObjectIDs)) {
+            return;
         }
         
-        [self.fetchedResultsController.managedObjectContext refreshObject:object mergeChanges:YES];
-    }
-    
-    [self.updatedObjectIDs removeAllObjects];
+        NSArray<NSManagedObject *> *fetchedObjects = self.fetchedResultsController.fetchedObjects;
+        
+        for (NSManagedObject *object in fetchedObjects) {
+            if (![self.updatedObjectIDs containsObject:object.objectID]) {
+                continue;
+            }
+            
+            [self.fetchedResultsController.managedObjectContext refreshObject:object mergeChanges:YES];
+        }
+        
+        [self.updatedObjectIDs removeAllObjects];
+    })
 }
 
 - (instancetype)initWithRelationshipKeyPaths:(NSSet<KBARelationshipKeyPath *> *)relationshipKeyPaths fetchedResultsController:(KBAFetchedResultsController *)fetchedResultsController {

@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'Baxter'
-  s.version          = '1.7.2'
+  s.version          = '2.0.0'
   s.summary          = 'Baxter is a iOS/macOS/tvOS/watchOS framework that extends the CoreData framework.'
   s.description      = <<-DESC
 Baxter is a iOS/macOS/tvOS/watchOS framework that extends the `CoreData` framework. It provides methods to simplify fetching and importing.
@@ -11,10 +11,10 @@ Baxter is a iOS/macOS/tvOS/watchOS framework that extends the `CoreData` framewo
   s.author           = { 'William Towe' => 'willbur1984@gmail.com' }
   s.source           = { :git => 'https://github.com/Kosoku/Baxter.git', :tag => s.version.to_s }
 
-  s.ios.deployment_target = '10.0'
-  s.osx.deployment_target = '10.12'
-  s.tvos.deployment_target = '10.0'
-  s.watchos.deployment_target = '3.0'
+  s.ios.deployment_target = '13.0'
+  s.osx.deployment_target = '10.15'
+  s.tvos.deployment_target = '13.0'
+  s.watchos.deployment_target = '5.0'
   
   s.requires_arc = true
 

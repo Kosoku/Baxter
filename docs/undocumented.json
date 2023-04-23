@@ -1,0 +1,96 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/williamtowe/Projects/Baxter/Baxter/Baxter.h",
+      "line": 23,
+      "symbol": "BaxterVersionNumber",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/williamtowe/Projects/Baxter/Baxter/Baxter.h",
+      "line": 26,
+      "symbol": "BaxterVersionString",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/williamtowe/Projects/Baxter/Baxter/KBAFetchedResultsController.h",
+      "line": 58,
+      "symbol": "KBARelationshipKeyPath.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/williamtowe/Projects/Baxter/Baxter/KBAFetchedResultsController.h",
+      "line": 59,
+      "symbol": "KBARelationshipKeyPath.+new",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/williamtowe/Projects/Baxter/Baxter/KBAFetchedResultsController.h",
+      "line": 80,
+      "symbol": "KBAFetchedResultsController.-initWithFetchRequest:managedObjectContext:sectionNameKeyPath:cacheName:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/williamtowe/Projects/Baxter/Baxter/KBAFetchedResultsController.h",
+      "line": 81,
+      "symbol": "KBAFetchedResultsController.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/williamtowe/Projects/Baxter/Baxter/KBAFetchedResultsController.h",
+      "line": 82,
+      "symbol": "KBAFetchedResultsController.+new",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/williamtowe/Projects/Baxter/Baxter/KBAFetchedResultsObserver.h",
+      "line": 82,
+      "symbol": "KBAFetchedResultsObserver.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/williamtowe/Projects/Baxter/Baxter/KBAFetchedResultsObserver.h",
+      "line": 83,
+      "symbol": "KBAFetchedResultsObserver.+new",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/williamtowe/Projects/Baxter/Baxter/KBAFetchedResultsObserver.h",
+      "line": 130,
+      "symbol": "KBAFetchedResultsObserverDelegate",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/williamtowe/Projects/Baxter/Baxter/NSFetchRequest+KBAExtensions.h",
+      "line": 132,
+      "symbol": "NSFetchRequest(KBAExtensions)",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.category",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/williamtowe/Projects/Baxter/Baxter/NSManagedObjectContext+KBAExtensions.h",
+      "line": 32,
+      "symbol": "NSManagedObjectContext(KBAExtensions)",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.category",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/williamtowe/Projects/Baxter/Baxter/NSManagedObjectContext+KBAImportExtensions.h",
+      "line": 27,
+      "symbol": "NSManagedObjectContext(KBAImportExtensions)",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.category",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/williamtowe/Projects/Baxter/Baxter"
+}

@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>NSManagedObjectContext(KBAImportExtensions) Category Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+
+    <a name="//apple_ref/objc/Extension/NSManagedObjectContext(KBAImportExtensions)" class="dashAnchor"></a>
+
+    <a title="NSManagedObjectContext(KBAImportExtensions) Category Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="../index.html">
+          Baxter 2.0.1 Docs
+        </a>
+         (84% documented)
+      </p>
+    
+      <div class="header-col--secondary">
+        <form role="search" action="../search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </div>
+    
+    
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="../index.html">Baxter Reference</a>
+      <img class="carat" src="../img/carat.png" alt=""/>
+      NSManagedObjectContext(KBAImportExtensions) Category Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Categories.html">Categories</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Categories/NSFetchRequest%28KBAExtensions%29.html">NSFetchRequest(KBAExtensions)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Categories/NSManagedObjectContext%28KBAExtensions%29.html">NSManagedObjectContext(KBAExtensions)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Categories/NSManagedObjectContext%28KBAImportExtensions%29.html">NSManagedObjectContext(KBAImportExtensions)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/KBAFetchedResultsController.html">KBAFetchedResultsController</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/KBAFetchedResultsObserver.html">KBAFetchedResultsObserver</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/KBARelationshipKeyPath.html">KBARelationshipKeyPath</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Constants.html">Constants</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@BaxterVersionNumber">BaxterVersionNumber</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@BaxterVersionString">BaxterVersionString</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KBANSFetchRequestOptionsKeyEntityName">KBANSFetchRequestOptionsKeyEntityName</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KBANSFetchRequestOptionsKeyFetchBatchSize">KBANSFetchRequestOptionsKeyFetchBatchSize</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KBANSFetchRequestOptionsKeyFetchLimit">KBANSFetchRequestOptionsKeyFetchLimit</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KBANSFetchRequestOptionsKeyFetchOffset">KBANSFetchRequestOptionsKeyFetchOffset</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KBANSFetchRequestOptionsKeyHavingPredicate">KBANSFetchRequestOptionsKeyHavingPredicate</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KBANSFetchRequestOptionsKeyIncludesPendingChanges">KBANSFetchRequestOptionsKeyIncludesPendingChanges</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KBANSFetchRequestOptionsKeyIncludesPropertyValues">KBANSFetchRequestOptionsKeyIncludesPropertyValues</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KBANSFetchRequestOptionsKeyIncludesSubentities">KBANSFetchRequestOptionsKeyIncludesSubentities</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KBANSFetchRequestOptionsKeyPredicate">KBANSFetchRequestOptionsKeyPredicate</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KBANSFetchRequestOptionsKeyPropertiesToFetch">KBANSFetchRequestOptionsKeyPropertiesToFetch</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KBANSFetchRequestOptionsKeyPropertiesToGroupBy">KBANSFetchRequestOptionsKeyPropertiesToGroupBy</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KBANSFetchRequestOptionsKeyRelationshipKeyPathsForPrefetching">KBANSFetchRequestOptionsKeyRelationshipKeyPathsForPrefetching</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KBANSFetchRequestOptionsKeyResultType">KBANSFetchRequestOptionsKeyResultType</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KBANSFetchRequestOptionsKeyReturnsDistinctResults">KBANSFetchRequestOptionsKeyReturnsDistinctResults</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KBANSFetchRequestOptionsKeyReturnsObjectsAsFaults">KBANSFetchRequestOptionsKeyReturnsObjectsAsFaults</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KBANSFetchRequestOptionsKeyShouldRefreshRefetchedObjects">KBANSFetchRequestOptionsKeyShouldRefreshRefetchedObjects</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@KBANSFetchRequestOptionsKeySortDescriptors">KBANSFetchRequestOptionsKeySortDescriptors</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/KBAFetchedResultsObserverChange.html">KBAFetchedResultsObserverChange</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/KBAFetchedResultsObserverDelegate.html">KBAFetchedResultsObserverDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/KBAManagedObjectEntityMapping.html">KBAManagedObjectEntityMapping</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/KBAManagedObjectPropertyMapping.html">KBAManagedObjectPropertyMapping</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Type%20Definitions.html">Type Definitions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Type%20Definitions.html#/c:NSManagedObjectContext+KBAExtensions.h@T@KBACoreDataCompletionBlock">KBACoreDataCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Type%20Definitions.html#/c:NSFetchRequest+KBAExtensions.h@T@KBANSFetchRequestOptionsKey">KBANSFetchRequestOptionsKey</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content top-matter">
+            <h1>NSManagedObjectContext(KBAImportExtensions)</h1>
+              <div class="declaration">
+                <div class="language">
+                  
+                  <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">NSManagedObjectContext</span> <span class="p">(</span><span class="nl">KBAImportExtensions</span><span class="p">)</span>
+
+<span class="cm">/**
+ Set and get the key used for testing equality when importing. If you require a custom key, this should be set before calling `KBA_importJSON:entityOrder:entityMapping:completion:`.
+ 
+ The default is @"identity".
+ */</span>
+<span class="k">@property</span> <span class="p">(</span><span class="n">class</span><span class="p">,</span><span class="n">copy</span><span class="p">,</span><span class="n">nonatomic</span><span class="p">,</span><span class="n">null_resettable</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">KBA_defaultIdentityKey</span><span class="p">;</span>
+<span class="cm">/**
+ Set and get the date formatter used to convert between JSON and NSDate objects.
+ 
+ The default is an NSDateFormatter with @"yyyy-MM-dd'T'HH:mm:ssZZZZZ" as its date format.
+ */</span>
+<span class="k">@property</span> <span class="p">(</span><span class="n">class</span><span class="p">,</span><span class="n">strong</span><span class="p">,</span><span class="n">nonatomic</span><span class="p">,</span><span class="n">null_resettable</span><span class="p">)</span> <span class="n">NSDateFormatter</span> <span class="o">*</span><span class="n">KBA_defaultDateFormatter</span><span class="p">;</span>
+
+<span class="cm">/**
+ Get the object responsible for mapping between entity properties and JSON keys.
+ 
+ The default is an instance of KBADefaultManagedObjectPropertyMapping.
+ 
+ @param entityName The name of the entity
+ @return The property mapping object for the entity with name
+ */</span>
+<span class="k">+</span> <span class="p">(</span><span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/KBAManagedObjectPropertyMapping.html">KBAManagedObjectPropertyMapping</a></span><span class="o">&gt;</span><span class="p">)</span><span class="nf">KBA_propertyMappingForEntityNamed</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">entityName</span><span class="p">;</span>
+<span class="cm">/**
+ Register a property mapping for a particular entity.
+ 
+ @param propertyMapping An object conforming to KBAManagedObjectPropertyMapping
+ @param entityName The name of the entity
+ */</span>
+<span class="k">+</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">KBA_registerPropertyMapping</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/KBAManagedObjectPropertyMapping.html">KBAManagedObjectPropertyMapping</a></span><span class="o">&gt;</span><span class="p">)</span><span class="nv">propertyMapping</span> <span class="nf">forEntityNamed</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">entityName</span><span class="p">;</span>
+
+<span class="cm">/**
+ Returns a NSManagedObject of entityName by mapping keys and values in dictionary using propertyMapping.
+ 
+ @param dictionary The dictionary of property/relationship key/value pairs
+ @param entityName The name of the entity to create
+ @param propertyMapping The property mapping to use during creation
+ @param error If the method returns nil, an error describing the reason for failure
+ @return The managed object
+ */</span>
+<span class="k">-</span> <span class="p">(</span><span class="n">nullable</span> <span class="n">__kindof</span> <span class="n">NSManagedObject</span> <span class="o">*</span><span class="p">)</span><span class="nf">KBA_managedObjectWithDictionary</span><span class="p">:(</span><span class="n">NSDictionary</span> <span class="o">*</span><span class="p">)</span><span class="nv">dictionary</span> <span class="nf">entityName</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">entityName</span> <span class="nf">propertyMapping</span><span class="p">:(</span><span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/KBAManagedObjectPropertyMapping.html">KBAManagedObjectPropertyMapping</a></span><span class="o">&gt;</span><span class="p">)</span><span class="nv">propertyMapping</span> <span class="nf">error</span><span class="p">:(</span><span class="n">NSError</span> <span class="o">*</span><span class="n">__autoreleasing</span> <span class="o">*</span><span class="p">)</span><span class="nv">error</span><span class="p">;</span>
+
+<span class="cm">/**
+ Imports the provided JSON, creating managed objects for each entry using entityMapping, which maps between JSON keys and entity names. Invokes the completion block when the operation is finished.
+ 
+ @param JSON A collection conforming to NSFastEnumeration, if a NSDictionary is provided, entityOrder can be nil
+ @param entityOrder The order to import the entities in JSON
+ @param entityMapping The entity mapping
+ @param completion The completion block invoked when the operation is finished
+ */</span>
+<span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">KBA_importJSON</span><span class="p">:(</span><span class="n">id</span><span class="o">&lt;</span><span class="n">NSFastEnumeration</span><span class="p">,</span><span class="n">NSObject</span><span class="o">&gt;</span><span class="p">)</span><span class="nv">JSON</span> <span class="nf">entityOrder</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSArray</span> <span class="o">*</span><span class="p">)</span><span class="nv">entityOrder</span> <span class="nf">entityMapping</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/KBAManagedObjectEntityMapping.html">KBAManagedObjectEntityMapping</a></span><span class="o">&gt;</span><span class="p">)</span><span class="nv">entityMapping</span> <span class="nf">completion</span><span class="p">:(</span><span class="kt">void</span><span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n">BOOL</span> <span class="n">success</span><span class="p">,</span> <span class="n">NSError</span> <span class="o">*</span><span class="n">_Nullable</span> <span class="n">error</span><span class="p">))</span><span class="nv">completion</span><span class="p">;</span>
+
+<span class="k">@end</span></code></pre>
+
+                </div>
+              </div>
+            <p>Undocumented</p>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-content">
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)NSManagedObjectContext(cpy)KBA_defaultIdentityKey"></a>
+                    <a name="//apple_ref/objc/Property/KBA_defaultIdentityKey" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)NSManagedObjectContext(cpy)KBA_defaultIdentityKey">KBA_defaultIdentityKey</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Set and get the key used for testing equality when importing. If you require a custom key, this should be set before calling <code>KBA_importJSON:entityOrder:entityMapping:completion:</code>.</p>
+
+<p>The default is @&ldquo;identity&rdquo;.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">class</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">copy</span><span class="p">,</span> <span class="n">null_resettable</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">KBA_defaultIdentityKey</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)NSManagedObjectContext(cpy)KBA_defaultDateFormatter"></a>
+                    <a name="//apple_ref/objc/Property/KBA_defaultDateFormatter" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)NSManagedObjectContext(cpy)KBA_defaultDateFormatter">KBA_defaultDateFormatter</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Set and get the date formatter used to convert between JSON and NSDate objects.</p>
+
+<p>The default is an NSDateFormatter with @&ldquo;yyyy-MM-dd&rsquo;T&#39;HH:mm:ssZZZZZ&rdquo; as its date format.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">class</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">null_resettable</span><span class="p">)</span> <span class="n">NSDateFormatter</span> <span class="o">*</span><span class="n">KBA_defaultDateFormatter</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)NSManagedObjectContext(cm)KBA_propertyMappingForEntityNamed:"></a>
+                    <a name="//apple_ref/objc/Method/+KBA_propertyMappingForEntityNamed:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)NSManagedObjectContext(cm)KBA_propertyMappingForEntityNamed:">+KBA_propertyMappingForEntityNamed:<wbr></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Get the object responsible for mapping between entity properties and JSON keys.</p>
+
+<p>The default is an instance of KBADefaultManagedObjectPropertyMapping.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">+</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/KBAManagedObjectPropertyMapping.html">KBAManagedObjectPropertyMapping</a></span><span class="o">&gt;</span><span class="p">)</span>
+    <span class="nf">KBA_propertyMappingForEntityNamed</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">entityName</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>entityName</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The name of the entity</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The property mapping object for the entity with name</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)NSManagedObjectContext(cm)KBA_registerPropertyMapping:forEntityNamed:"></a>
+                    <a name="//apple_ref/objc/Method/+KBA_registerPropertyMapping:forEntityNamed:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)NSManagedObjectContext(cm)KBA_registerPropertyMapping:forEntityNamed:">+KBA_registerPropertyMapping:<wbr>forEntityNamed:<wbr></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Register a property mapping for a particular entity.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">+</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">KBA_registerPropertyMapping</span><span class="p">:</span>
+            <span class="p">(</span><span class="n">nullable</span> <span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/KBAManagedObjectPropertyMapping.html">KBAManagedObjectPropertyMapping</a></span><span class="o">&gt;</span><span class="p">)</span><span class="nv">propertyMapping</span>
+                     <span class="nf">forEntityNamed</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">entityName</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>propertyMapping</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>An object conforming to KBAManagedObjectPropertyMapping</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>entityName</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The name of the entity</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)NSManagedObjectContext(im)KBA_managedObjectWithDictionary:entityName:propertyMapping:error:"></a>
+                    <a name="//apple_ref/objc/Method/-KBA_managedObjectWithDictionary:entityName:propertyMapping:error:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)NSManagedObjectContext(im)KBA_managedObjectWithDictionary:entityName:propertyMapping:error:">-KBA_managedObjectWithDictionary:<wbr>entityName:<wbr>propertyMapping:<wbr>error:<wbr></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns a NSManagedObject of entityName by mapping keys and values in dictionary using propertyMapping.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nullable</span> <span class="n">__kindof</span> <span class="n">NSManagedObject</span> <span class="o">*</span><span class="p">)</span>
+    <span class="nf">KBA_managedObjectWithDictionary</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSDictionary</span> <span class="o">*</span><span class="p">)</span><span class="nv">dictionary</span>
+                         <span class="nf">entityName</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">entityName</span>
+                    <span class="nf">propertyMapping</span><span class="p">:</span>
+                        <span class="p">(</span><span class="n">nonnull</span> <span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/KBAManagedObjectPropertyMapping.html">KBAManagedObjectPropertyMapping</a></span><span class="o">&gt;</span><span class="p">)</span>
+                            <span class="n">propertyMapping</span>
+                              <span class="n">error</span><span class="o">:</span><span class="p">(</span><span class="n">NSError</span> <span class="o">*</span><span class="n">_Nullable</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span><span class="n">error</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>dictionary</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The dictionary of property/relationship key/value pairs</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>entityName</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The name of the entity to create</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>propertyMapping</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The property mapping to use during creation</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>error</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>If the method returns nil, an error describing the reason for failure</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The managed object</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)NSManagedObjectContext(im)KBA_importJSON:entityOrder:entityMapping:completion:"></a>
+                    <a name="//apple_ref/objc/Method/-KBA_importJSON:entityOrder:entityMapping:completion:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)NSManagedObjectContext(im)KBA_importJSON:entityOrder:entityMapping:completion:">-KBA_importJSON:<wbr>entityOrder:<wbr>entityMapping:<wbr>completion:<wbr></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Imports the provided JSON, creating managed objects for each entry using entityMapping, which maps between JSON keys and entity names. Invokes the completion block when the operation is finished.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">KBA_importJSON</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">id</span><span class="o">&lt;</span><span class="n">NSFastEnumeration</span><span class="p">,</span> <span class="n">NSObject</span><span class="o">&gt;</span><span class="p">)</span><span class="nv">JSON</span>
+           <span class="nf">entityOrder</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSArray</span> <span class="o">*</span><span class="p">)</span><span class="nv">entityOrder</span>
+         <span class="nf">entityMapping</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/KBAManagedObjectEntityMapping.html">KBAManagedObjectEntityMapping</a></span><span class="o">&gt;</span><span class="p">)</span><span class="nv">entityMapping</span>
+            <span class="nf">completion</span><span class="p">:(</span><span class="n">nonnull</span> <span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n">BOOL</span><span class="p">,</span> <span class="n">NSError</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">))</span><span class="nv">completion</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>JSON</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A collection conforming to NSFastEnumeration, if a NSDictionary is provided, entityOrder can be nil</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>entityOrder</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The order to import the entities in JSON</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>entityMapping</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The entity mapping</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The completion block invoked when the operation is finished</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>&copy; 2023 <a class="link" href="https://github.com/Kosoku" target="_blank" rel="external noopener">Kosoku</a>. All rights reserved. (Last updated: 2023-04-23)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
+    </section>
+  </body>
+</html>
